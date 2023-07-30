@@ -1,0 +1,326 @@
+
+body {
+    font-family: 'iranyekan',"Plus Jakarta Sans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
+}
+main, aside{
+    direction: rtl;
+  }
+p{
+    text-align: justify;
+}
+
+/* ===  Sidebar === */
+.rightSidebar .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children > a::after{
+    right: unset;
+    left: 25px;
+  }
+.rightSidebar .sidebar-nav-wrapper .sidebar-nav ul .nav-item a .icon{
+    margin-right: 0;
+    margin-left: 12px;
+  }
+.rightSidebar .sidebar-nav-wrapper .sidebar-nav ul .nav-item a::before{
+    left: unset;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+/* ===  Header === */
+.rightSidebar .header .header-left .header-search form input{
+    padding-right: 10px;
+  }
+.rightSidebar .header .header-right .profile-box .profile-info .info .image{
+    margin-left: 0;
+    margin-right: 10px;
+  }
+.rightSidebar .icon-card .icon{
+    margin-right: 0;
+    margin-left: 25px;
+  }
+/* image */
+.rightSidebar .top-selling-table .product .image ,
+.rightSidebar .header .header-right .dropdown-menu li a .image,
+.rightSidebar .header .header-right .profile-box .dropdown-menu li a i{
+    margin-right: 0;
+    margin-left: 12px;
+}
+
+/* ===  Navbar === */
+.rightSidebar nav > ol.breadcrumb{
+    flex-direction: row-reverse!important;
+  }
+.rightSidebar .breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+    padding-right: var(--bs-breadcrumb-item-padding-x)!important;
+  }
+
+
+
+/* === Dashboard === */
+.rightSidebar .legend3 li {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.rightSidebar .legend3 li .text {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.rightSidebar .doughnutChart-legend ul li .left {
+    position: relative;
+    padding-left: 0px;
+    padding-right: 20px;
+}
+.rightSidebar .doughnutChart-legend ul li .left:before {
+    left: unset;
+    right: 0;
+}
+.rightSidebar .table .employee-image{
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* === Select ===*/
+.rightSidebar .select-style-1 .select-position::after{
+    right: unset;
+    left: 16px;
+}
+.rightSidebar .select-style-1 .select-position select {
+    padding-right: 16px;
+    padding-left: 35px;
+}
+
+/* === Project === */
+.rightSidebar .project-card .card-body .chart-wrapper .chart {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+.rightSidebar .project-card .card-footer .project-image a {
+    margin-left: 0;
+}
+.rightSidebar .project-card .card-footer .project-image ul li:first-child{
+    margin-left: -10px;
+}
+.rightSidebar .activity-wrapper ul li .icon{
+    margin-right: 0;
+    margin-left: 15px;
+}
+.rightSidebar .activity-wrapper ul li::after{
+    left: unset;
+    right: 24px;
+}
+
+/* === Clients === */
+.rightSidebar .client-profile-wrapper .client-cover .update-image label i{
+    margin-right: 0;
+}
+.rightSidebar .client-profile-wrapper{
+    border-radius: 10px;
+}
+
+/* === Chat === */
+.rightSidebar .chat-list-item .content button{
+    margin-left: 0;
+    margin-right: 14px;
+}
+.rightSidebar .chat-list-item .image{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.rightSidebar .message-box .image{
+    margin-right: 0;
+    margin-left: 20px;
+}
+.rightSidebar .message-box.right .image{
+    margin-right: 20px;
+    margin-left: 0;
+}
+.rightSidebar .message-form form .message-field .file-emoji{
+    right: unset;
+    left: 15px;
+}
+.rightSidebar .input-style-3 .icon{
+    right: 0;
+    left: unset;
+}
+.rightSidebar .input-style-3 input, .input-style-3 textarea{
+    padding-left: 16px;
+    padding-right: 45px;
+}
+
+/* === Kanban === */
+.rightSidebar .kanban-card h4{
+    text-align: right;
+}
+.rightSidebar .task-details-modal .modal-meta-wrapper .modal-meta:first-child{
+    border-right: 0;
+}
+.rightSidebar .task-details-modal .modal-meta-wrapper .modal-meta:nth-child(2n){
+    border-right: 1px solid #efefef;
+    border-left: 1px solid #efefef;
+}
+
+/* === File Manager ==== */
+.rightSidebar .file-card .clean-button{
+    right: unset;
+    left: -38px;
+    margin-top: -16px;
+    transform: rotate(90deg);
+}
+.rightSidebar .file-card .file-chart-content{
+    padding-left: 0;
+    padding-right: 15px;
+}
+.rightSidebar .file-item .icon{
+    margin-right: 0;
+    margin-left: 15px;
+}
+.rightSidebar .file-item .file-size-wrapper .file-size{
+    left: unset;
+    right: 0;
+}
+.rightSidebar .recent-files .recent-file-item .icon{
+    margin-left: 14px;
+    margin-right: 0;
+}
+
+/* === Profile === */
+.rightSidebar .profile-wrapper .profile-cover .update-image{
+    left: 30px;
+    right: unset;
+}
+.rightSidebar .profile-wrapper .profile-cover .update-image label i{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.rightSidebar .profile-wrapper .profiles-activities{
+    padding-right: 0;
+    padding-left: 40px;
+}
+.rightSidebar .card-style-6 .card-action .action button{
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+/* === Task === */
+.rightSidebar .task-table .table td:first-child > *{
+    padding-right: 30px;
+    padding-left: 0;
+}
+.rightSidebar .task-table .table td:last-child > *{
+    padding-left: 30px;
+    padding-right: 0;
+}
+
+/* === Cards === */
+.rightSidebar .card-style-1 .card-meta .image{
+    margin-left: 12px;
+    margin-right: 0;
+}
+.rightSidebar .card-style-5 .card-image{
+    margin-right: 0;
+    margin-left: 20px;
+}
+/* === Modals === */
+.rightSidebar .checkbox-style {
+    padding-left: 0;
+    padding-right: 40px;
+}
+.rightSidebar .checkbox-style .form-check-input {
+    margin-left: 0;
+    margin-right: -40px;
+}
+
+/* === Tabs === */
+.rightSidebar .tab-style-1 nav button,
+.rightSidebar .tab-style-6 nav button{
+    margin-right: 0;
+    margin-left: 40px;
+}
+.rightSidebar .tab-style-2 nav button,
+.rightSidebar .tab-style-4 nav button{
+    margin-right: 0;
+    margin-left: 20px;
+}
+.rightSidebar .tab-style-2 nav button:last-child,
+.rightSidebar .tab-style-4 nav button:last-child{
+    margin-left: 0;
+}
+.rightSidebar .tab-style-3 nav button{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.rightSidebar .tab-style-5 nav{
+    margin-right: 0;
+    margin-left: 30px;
+}
+.rightSidebar .tab-style-5 nav button::after{
+    border-radius: 8px;
+    right: unset;
+    left: -54px;
+}
+.rightSidebar .tab-style-1 nav button::after,
+.rightSidebar .tab-style-2 nav button::after{
+    right: 0;
+    left: unset;
+}
+
+/* === icons === */
+.rightSidebar. .icons-wrapper .icons > div i,
+.rightSidebar.icons-wrapper .icons li i,
+.rightSidebar.icons-wrapper ul > div i,
+.rightSidebar.icons-wrapper ul li i{
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+/* === Forms === */
+.rightSidebar .input-style-2 .icon{
+    left: 0;
+    right: unset;
+}
+.rightSidebar .toggle-switch .form-check-input{
+    margin-left: 0;
+    margin-right: -60px;
+}
+.rightSidebar .radio-style .form-check-input{
+    margin-left: 0;
+    margin-right: -40px;
+}
+.rightSidebar .table .lead .lead-image{
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* ==== Editor ====*/
+.rightSidebar .ql-editor.ql-blank{
+    text-align: right;
+    direction: rtl;
+    font-family: 'iranyekan', Arial, serif;
+}
+
+/* === Res Table ==== */
+.rightSidebar .table-search form button{
+    left: unset;
+    right: 16px;
+}
+.rightSidebar .table-search form input{
+    padding-left: 0;
+    padding-right: 44px;
+}
+/* === Datatable === */
+.rightSidebar .dataTable-table > thead > tr > th {
+    text-align: right;
+}
+.rightSidebar .dataTable-sorter::before,
+.rightSidebar .dataTable-sorter::after {
+    right: unset;
+    left: 4px;
+}
+.rightSidebar .dataTable-pagination ul{
+    display: flex;
+}
+
+/* === Notif === */
+.rightSidebar .single-notification .notification .image{
+    margin-right: 0;
+    margin-left: 15px;
+}

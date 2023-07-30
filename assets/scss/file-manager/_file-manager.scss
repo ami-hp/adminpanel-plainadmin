@@ -1,0 +1,194 @@
+
+/* =========== File Manager css =========== */
+$color_1: inherit;
+$color_2: #000;
+$color_3: #fff;
+
+.file-manager-cards-wrapper {
+  .icon-card {
+    .content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .file-size {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+.recent-files {
+  .recent-file-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    .icon {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: #f6f6f8;
+      margin-right: 14px;
+    }
+    h6 {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+.file-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .icon {
+    max-width: 40px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: #f6f6f8;
+    margin-right: 15px;
+  }
+  .file-size-wrapper {
+    margin-top: 12px;
+    position: relative;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background: #e6e9ed;
+    overflow: hidden;
+    .file-size {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      border-radius: 30px;
+    }
+  }
+}
+.file-card {
+  .card-body {
+    display: flex;
+    align-items: center;
+  }
+  .file-chart-content {
+    padding-left: 15px;
+    h5 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+  .chart-wrapper {
+    display: flex;
+    align-items: center;
+    .ldBar-chart {
+      position: relative;
+      .baseline {
+        stroke: inherit;
+        stroke-width: 10px;
+        opacity: 0.1;
+      }
+      .mainline {
+        stroke: inherit;
+        stroke-width: 10px;
+      }
+      .ldBar-label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color_1;
+      }
+    }
+    .chart-body {
+      width: 125px;
+      @media (min-width: 1400px) and (max-width: 1600px) {
+        width: 115px;
+      }
+      .ldBar-label {
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        color: $color_2;
+        &:after {
+          content: "%";
+        }
+      }
+    }
+  }
+  .clean-button {
+    position: absolute;
+    right: -26px;
+    top: 50%;
+    margin-top: -10px;
+    transform: rotate(-90deg);
+    background: #f98db4;
+    color: $color_3;
+    border-radius: 5px 5px 0px 0px;
+    border: none;
+    padding: 4px 20px;
+  }
+}
+
+.ldBar {
+  position: relative
+}
+.ldBar.label-center>.ldBar-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  text-shadow: 0 0 3px #fff
+}
+.ldBar-label:after {
+  content: "%";
+  display: inline
+}
+.ldBar.no-percent .ldBar-label:after {
+  content: ""
+}
+
+/* ======= Theme Change ========== */
+$color_1: #fff;
+.darkTheme {
+  .recent-files {
+    .recent-file-item {
+      .icon {
+        background: #2f3546;
+      }
+    }
+  }
+  .file-item {
+    .file-size-wrapper {
+      background: #2f3546;
+    }
+    .icon {
+      background: #2f3546;
+    }
+  }
+  .file-card {
+    .chart-wrapper {
+      .chart-body {
+        .ldBar-label {
+          color: $color_1;
+        }
+      }
+    }
+  }
+}
+

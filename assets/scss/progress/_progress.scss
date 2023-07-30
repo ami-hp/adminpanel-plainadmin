@@ -1,0 +1,84 @@
+
+/* ========== Progress Bar css ========== */
+/* progress base styles */
+
+.progress-wrapper {
+  --orange: 245, 128, 97;
+  --blue-light: 79, 144, 255;
+  --green-light: 46, 216, 175;
+  --blue: 86, 123, 255;
+  --yellow: 252, 166, 27;
+  --green: 151, 202, 49;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .orange-bg {
+    background-color: rgba(var(--orange), 1);
+  }
+  .orange-bg-light {
+    background-color: rgba(var(--orange), 0.1);
+  }
+  .blue-bg {
+    background-color: rgba(var(--blue), 1);
+  }
+  .blue-bg-light {
+    background-color: rgba(var(--blue), 0.1);
+  }
+  .yellow-bg {
+    background-color: rgba(var(--yellow), 1);
+  }
+  .yellow-bg-light {
+    background-color: rgba(var(--yellow), 0.1);
+  }
+  .green-bg {
+    background-color: rgba(var(--green), 1);
+  }
+  .green-bg-light {
+    background-color: rgba(var(--green), 0.1);
+  }
+  .blue-light-bg {
+    background-color: rgba(var(--blue-light), 1);
+  }
+  .blue-light-bg-light {
+    background-color: rgba(var(--blue-light), 0.1);
+  }
+  .green-light-bg {
+    background-color: rgba(var(--green-light), 1);
+  }
+  .green-light-bg-light {
+    background-color: rgba(var(--green-light), 0.1);
+  }
+}
+.progress-item {
+  width: 100%;
+  height: 8px;
+  background-color: transparent;
+  border-radius: 30px;
+  overflow: hidden;
+  .progress-item-bar {
+    height: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.progress-item-lg {
+  height: 16px;
+}
+.progress-bar-striped {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 8px;
+}
+.progress-bar-animated {
+  animation: 1s linear infinite progress-bar-stripes;
+}
+
+@keyframes progress-bar-stripes {
+  0% {
+    background-position-x: 7px;
+  }
+}

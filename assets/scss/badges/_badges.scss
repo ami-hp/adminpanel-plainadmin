@@ -1,0 +1,193 @@
+/* ========== Badges css ========== */
+
+/* badges base styles */
+.main-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 10px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  border-radius: 3px;
+  z-index: 5;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.badge-xl {
+  padding: 10px 10px 10px 15px;
+  font-weight: 500;
+  font-size: 14px;
+  justify-content: space-between;
+  max-width: 150px;
+  width: 100%;
+
+  span {
+    padding: 4px 8px;
+  }
+}
+
+/* primary buttons */
+.primary-badge {
+  background: #365CF5;
+  color: #fff;
+
+  :hover {
+    color: #fff;
+  }
+}
+
+.primary-badge-light {
+  background: rgba(54, 92, 245, 0.08);
+  color: #365CF5;
+
+  &:hover {
+    color: #365CF5;
+  }
+}
+
+/* secondary buttons */
+.secondary-badge {
+  background: #00c1f8;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.secondary-badge-light {
+  background: rgba(0, 193, 248, 0.08);
+  color: #00c1f8;
+
+  &:hover {
+    color: #00c1f8;
+  }
+}
+
+/* success buttons */
+.success-badge {
+  background: #219653;
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.success-badge-light {
+  background: rgba(33, 150, 83, 0.08);
+  color: #219653;
+
+  &:hover {
+    color: #219653;
+  }
+}
+
+/* danger buttons */
+.danger-badge {
+  background: #d50100;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.danger-badge-light {
+  background: rgba(213, 1, 0, 0.08);
+  color: #d50100;
+
+  &:hover {
+    color: #d50100;
+  }
+}
+
+/* warning buttons */
+.warning-badge {
+  background: #f7c800;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.warning-badge-light {
+  background: rgba(247, 200, 0, 0.08);
+  color: #f7c800;
+
+  &:hover {
+    color: #f7c800;
+  }
+}
+
+
+/* info buttons */
+.info-badge {
+  background: #97ca31;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.info-badge-light {
+  background: rgba(151, 202, 49, 0.08);
+  color: #97ca31;
+
+  &:hover {
+    color: #97ca31;
+  }
+}
+
+/* dark buttons */
+.dark-badge {
+  background: #1A2142;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.dark-badge-light {
+  background: rgba(26, 33, 66, 0.08);
+  color: #1A2142;
+
+  &:hover {
+    color: #1A2142;
+  }
+}
+
+/* ========== buttons group css ========= */
+.badges-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ======= Theme Change Css =========== */
+.darkTheme {
+  .dark-badge {
+    background: #2f3546;
+  }
+  .dark-badge-outline {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .light-badge-outline {
+    color: #efefef;
+  }
+}

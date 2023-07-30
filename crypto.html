@@ -1,0 +1,2686 @@
+<!DOCTYPE html>
+
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+          rel="shortcut icon"
+          href="assets/images/favicon.svg"
+          type="image/x-icon"
+  />
+  <title>
+    iamami | پنل ادمین
+  </title>
+
+  <!-- ========== All CSS files linkup ========= -->
+  <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css" /> -->
+
+  <!-- RTL BootStrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="assets/css/lineicons.css" />
+  <link rel="stylesheet" href="assets/css/materialdesignicons.min.css" />
+  <!-- <link rel="stylesheet" href="assets/css/fullcalendar.css" /> -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <!-- ======== custom CSS ========== -->
+  <link rel="stylesheet" href="assets/css/custom.css" />
+  <!-- ======== RTL custom CSS =========== -->
+  <link rel="stylesheet" href="assets/css/iranyekan.css" />
+  <link rel="stylesheet" href="assets/css/custom-rtl.css" />
+
+</head>
+
+<body class="rightSidebar">
+<!-- ======== sidebar-nav start =========== -->
+<!--for activating a link
+    1- to the activated link that has .dropdown-nav ADD CLASS: .show and remove from others
+    2- to the tag "a" that is on in .dropdown-nav ADD CLASS .active and remove from others
+    3- to the li that has .nav-item-has-children and is on REMOVE CLASS: .collapsed and ADD to others
+    -->
+
+<aside class="sidebar-nav-wrapper active">
+
+  <button type="button" id="menu-CrossIcon"
+          class="btn-close d-lg-none position-absolute top-0 p-2 focus-ring focus-ring-dark"
+          aria-label="Close"  style="--bs-focus-ring-color: rgba(0,0,0, 0)">
+  </button>
+
+  <!-- Panel Logo -->
+  <div class="navbar-logo">
+    <a>
+      <img src="assets/images/logo/iamami-logo-b.svg" data-lightmode="assets/images/logo/iamami-logo-b.svg" data-darkmode="assets/images/logo/iamami-logo-w.svg" alt="logo" />
+    </a>
+  </div>
+
+  <nav class="sidebar-nav">
+    <ul>
+      <li class="nav-item d-flex justify-content-evenly">
+        <div class="darkThemeBtn">
+
+          <input type="checkbox" id="darkmode-toggle" data-checked="off"/>
+
+          <label for="darkmode-toggle">
+
+            <svg class="sun" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(0 512) scale(.1 -.1)"><path d="m2513 5105c-59-25-63-46-63-320 0-266 4-288 54-315 33-17 79-17 112 0 50 27 54 49 54 315 0 275-4 295-65 321-42 17-51 17-92-1z"/><path d="m754 4366c-28-28-34-41-34-77 0-42 3-45 188-231l187-188h47c39 0 52 5 77 31 26 25 31 38 31 77v47l-188 187c-186 185-189 188-231 188-36 0-49-6-77-34z"/><path d="m4058 4212-188-187v-47c0-39 5-52 31-77 25-26 38-31 77-31h46l188 188c186 186 188 188 188 231 0 36-6 49-34 77s-41 34-77 34c-42 0-45-3-231-188z"/><path d="m2440 4224c-453-50-760-192-1056-488-264-264-419-570-475-936-17-109-17-371 0-480 56-366 211-672 475-936s570-419 936-475c109-17 371-17 480 0 366 56 672 211 936 475 225 225 358 455 438 758 38 143 50 249 50 418 0 219-30 388-104 590-137 372-450 719-813 901-143 72-315 128-474 154-89 15-329 26-393 19zm335-235c305-46 582-186 805-409 567-567 567-1473 0-2040s-1473-567-2040 0-567 1473 0 2040c328 328 777 476 1235 409z"/><path d="m54 2651c-20-12-37-34-44-55-16-49 2-101 44-127 28-17 52-19 279-19 268 0 289 4 317 54 17 33 17 79 0 112-28 50-49 54-317 54-227 0-251-2-279-19z"/><path d="m4512 2657c-73-41-73-155 0-193 21-11 81-14 275-14 227 0 251 2 279 19 42 26 60 78 44 127-7 21-24 43-44 55-28 17-52 19-281 19-181-1-256-4-273-13z"/><path d="m908 1062c-185-186-188-189-188-231 0-36 6-49 34-77s41-34 77-34c43 0 45 2 231 188l188 188v46c0 39-5 52-31 77-25 26-38 31-77 31h-47l-187-188z"/><path d="m3901 1219c-26-25-31-38-31-77v-47l188-187c186-185 189-188 231-188 36 0 49 6 77 34s34 41 34 77c0 43-2 45-188 231l-188 188h-46c-39 0-52-5-77-31z"/><path d="m2540 663c-87-28-90-37-90-330 0-227 2-251 19-279 40-66 142-66 182 0 17 28 19 52 19 279 0 266-4 291-52 314-32 16-60 22-78 16z"/></g>
+            </svg>
+
+            <svg class="moon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(0 512) scale(.1 -.1)">
+                <path d="m2090 5105c-248-51-443-118-659-226-514-256-909-652-1161-1163-94-191-139-311-185-490-127-500-110-999 51-1468 133-389 331-706 624-998 403-404 875-642 1460-736 147-24 529-24 693 0 539 78 981 283 1390 644 362 319 647 793 766 1270 46 186 56 256 42 299-22 71-80 116-151 117-73 1-104-19-181-116-307-390-733-627-1233-689-119-14-385-7-501 15-582 106-1066 469-1321 991-120 246-171 452-181 731-21 586 230 1126 695 1493 96 75 117 107 117 177 0 85-67 155-153 160-26 1-76-3-112-11zm110-149c0-2-26-23-57-47-81-60-254-230-325-318-213-264-353-573-415-916-22-126-25-508-5-625 62-346 195-651 395-910 72-93 228-250 327-329 266-213 571-349 930-413 117-20 499-17 625 5 343 62 652 202 916 415 88 71 258 244 318 325 24 32 46 56 48 54s-8-60-23-128c-127-606-501-1155-1027-1505-780-521-1798-535-2602-36-295 183-594 482-777 777-335 539-445 1180-308 1795 138 621 515 1158 1060 1511 136 88 374 201 530 253 148 49 390 106 390 92z"/>
+              </g>
+            </svg>
+
+          </label>
+        </div>
+        <div class="styleBtn">
+
+          <input type="checkbox" id="stylemode-toggle" data-checked="off"/>
+
+          <label for="stylemode-toggle">
+
+          </label>
+        </div>
+      </li>
+
+      <li class="nav-item nav-item-has-children">
+        <a
+                href="#0"
+                data-bs-toggle="collapse"
+                data-bs-target="#ddmenu_1"
+                aria-controls="ddmenu_1"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 22 22">
+                  <path d="M17.4167 4.58333V6.41667H13.75V4.58333H17.4167ZM8.25 4.58333V10.0833H4.58333V4.58333H8.25ZM17.4167 11.9167V17.4167H13.75V11.9167H17.4167ZM8.25 15.5833V17.4167H4.58333V15.5833H8.25ZM19.25 2.75H11.9167V8.25H19.25V2.75ZM10.0833 2.75H2.75V11.9167H10.0833V2.75ZM19.25 10.0833H11.9167V19.25H19.25V10.0833ZM10.0833 13.75H2.75V19.25H10.0833V13.75Z"></path>
+                </svg>
+              </span>
+          <span class="text">میز کار</span>
+        </a>
+        <ul id="ddmenu_1" class="collapse show dropdown-nav">
+          <li>
+            <a href="index.html"> فروشگاه اینترنتی </a>
+          </li>
+          <li>
+            <a href="analytics-dashboard.html">
+                <span class="text">
+                  آنالیزها
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="crypto.html" class="active">
+                <span class="text">
+                  رمزارز
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="crm-dashboard.html">
+                <span class="text">
+                  CRM
+                </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item nav-item-has-children">
+        <a
+                href="#0"
+                class="collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#ddmenu_2"
+                aria-controls="ddmenu_2"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+              <span class="icon">
+                <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                          d="M12.8334 1.83325H5.50008C5.01385 1.83325 4.54754 2.02641 4.20372 2.37022C3.8599 2.71404 3.66675 3.18036 3.66675 3.66659V18.3333C3.66675 18.8195 3.8599 19.2858 4.20372 19.6296C4.54754 19.9734 5.01385 20.1666 5.50008 20.1666H16.5001C16.9863 20.1666 17.4526 19.9734 17.7964 19.6296C18.1403 19.2858 18.3334 18.8195 18.3334 18.3333V7.33325L12.8334 1.83325ZM16.5001 18.3333H5.50008V3.66659H11.9167V8.24992H16.5001V18.3333Z"
+                  />
+                </svg>
+              </span>
+          <span class="text">صفحات</span>
+        </a>
+        <ul id="ddmenu_2" class="collapse dropdown-nav">
+          <li>
+            <a href="settings.html"> تنظیمات </a>
+          </li>
+          <li>
+            <a href="projects.html">
+                <span class="text">
+                  پروژه ها
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="clients.html">
+                <span class="text">
+                  مشتریان
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="pricing.html">
+                <span class="text">
+                  قیمت دهی
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="chat.html">
+                <span class="text">
+                  چت
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="error-page.html">
+                <span class="text">
+                  ارور 404
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="blank-page.html"> صفحه خالی </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="kanban.html">
+            <span class="icon">
+              <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                        d="M16.3333 19.1666H1.66667C1.42355 19.1666 1.19039 19.07 1.01849 18.8981C0.846577 18.7262 0.75 18.493 0.75 18.2499V1.74992C0.75 1.5068 0.846577 1.27365 1.01849 1.10174C1.19039 0.929829 1.42355 0.833252 1.66667 0.833252H16.3333C16.5764 0.833252 16.8096 0.929829 16.9815 1.10174C17.1534 1.27365 17.25 1.5068 17.25 1.74992V18.2499C17.25 18.493 17.1534 18.7262 16.9815 18.8981C16.8096 19.07 16.5764 19.1666 16.3333 19.1666ZM15.4167 17.3333V2.66659H2.58333V17.3333H15.4167ZM5.33333 5.41658H12.6667V7.24992H5.33333V5.41658ZM5.33333 9.08325H12.6667V10.9166H5.33333V9.08325ZM5.33333 12.7499H9.91667V14.5833H5.33333V12.7499Z" />
+              </svg>
+            </span>
+          <span class="text">
+              کانبان
+            </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="file-manager.html">
+            <span class="icon">
+              <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                        d="M1.77778 1.77778V14.2222H16V3.55556H8.52089L6.74311 1.77778H1.77778ZM9.25689 1.77778H16.8889C17.1246 1.77778 17.3507 1.87143 17.5174 2.03813C17.6841 2.20483 17.7778 2.43092 17.7778 2.66667V15.1111C17.7778 15.3469 17.6841 15.573 17.5174 15.7397C17.3507 15.9064 17.1246 16 16.8889 16H0.888889C0.653141 16 0.427048 15.9064 0.260349 15.7397C0.0936505 15.573 0 15.3469 0 15.1111V0.888889C0 0.653141 0.0936505 0.427048 0.260349 0.260349C0.427048 0.0936505 0.653141 0 0.888889 0H7.47911L9.25689 1.77778Z" />
+              </svg>
+            </span>
+          <span class="text">
+              مدیریت فایل ها
+            </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="profile.html">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                        d="M11.0001 3.66675C11.9725 3.66675 12.9052 4.05306 13.5928 4.74069C14.2804 5.42832 14.6667 6.36095 14.6667 7.33341C14.6667 8.30587 14.2804 9.23851 13.5928 9.92614C12.9052 10.6138 11.9725 11.0001 11.0001 11.0001C10.0276 11.0001 9.09499 10.6138 8.40736 9.92614C7.71972 9.23851 7.33341 8.30587 7.33341 7.33341C7.33341 6.36095 7.71972 5.42832 8.40736 4.74069C9.09499 4.05306 10.0276 3.66675 11.0001 3.66675ZM11.0001 5.50008C10.5139 5.50008 10.0475 5.69324 9.70372 6.03705C9.3599 6.38087 9.16675 6.84718 9.16675 7.33341C9.16675 7.81964 9.3599 8.28596 9.70372 8.62978C10.0475 8.97359 10.5139 9.16675 11.0001 9.16675C11.4863 9.16675 11.9526 8.97359 12.2964 8.62978C12.6403 8.28596 12.8334 7.81964 12.8334 7.33341C12.8334 6.84718 12.6403 6.38087 12.2964 6.03705C11.9526 5.69324 11.4863 5.50008 11.0001 5.50008ZM11.0001 11.9167C13.4476 11.9167 18.3334 13.1359 18.3334 15.5834V18.3334H3.66675V15.5834C3.66675 13.1359 8.55258 11.9167 11.0001 11.9167ZM11.0001 13.6584C8.27758 13.6584 5.40841 14.9967 5.40841 15.5834V16.5917H16.5917V15.5834C16.5917 14.9967 13.7226 13.6584 11.0001 13.6584Z" />
+              </svg>
+            </span>
+          <span class="text">
+              پروفایل
+            </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="invoice.html">
+              <span class="icon">
+                <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                          d="M17.4166 7.33333C18.9383 7.33333 20.1666 8.56167 20.1666 10.0833V15.5833H16.4999V19.25H5.49992V15.5833H1.83325V10.0833C1.83325 8.56167 3.06159 7.33333 4.58325 7.33333H5.49992V2.75H16.4999V7.33333H17.4166ZM7.33325 4.58333V7.33333H14.6666V4.58333H7.33325ZM14.6666 17.4167V13.75H7.33325V17.4167H14.6666ZM16.4999 13.75H18.3333V10.0833C18.3333 9.57917 17.9208 9.16667 17.4166 9.16667H4.58325C4.07909 9.16667 3.66659 9.57917 3.66659 10.0833V13.75H5.49992V11.9167H16.4999V13.75ZM17.4166 10.5417C17.4166 11.0458 17.0041 11.4583 16.4999 11.4583C15.9958 11.4583 15.5833 11.0458 15.5833 10.5417C15.5833 10.0375 15.9958 9.625 16.4999 9.625C17.0041 9.625 17.4166 10.0375 17.4166 10.5417Z"
+                  />
+                </svg>
+              </span>
+          <span class="text">فاکتور</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="task.html">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                        d="M4.58341 8.70841L6.87508 12.8334H2.29175L4.58341 8.70841ZM2.75008 3.66675H6.41675V7.33341H2.75008V3.66675ZM4.58341 18.3334C5.06964 18.3334 5.53596 18.1403 5.87978 17.7964C6.22359 17.4526 6.41675 16.9863 6.41675 16.5001C6.41675 16.0139 6.22359 15.5475 5.87978 15.2037C5.53596 14.8599 5.06964 14.6667 4.58341 14.6667C4.09718 14.6667 3.63087 14.8599 3.28705 15.2037C2.94324 15.5475 2.75008 16.0139 2.75008 16.5001C2.75008 16.9863 2.94324 17.4526 3.28705 17.7964C3.63087 18.1403 4.09718 18.3334 4.58341 18.3334ZM8.25008 4.58341V6.41675H19.2501V4.58341H8.25008ZM8.25008 17.4167H19.2501V15.5834H8.25008V17.4167ZM8.25008 11.9167H19.2501V10.0834H8.25008V11.9167Z" />
+              </svg>
+            </span>
+          <span class="text">
+              کارها
+            </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="calendar.html">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                        d="M8.25 9.16675H6.41667V11.0001H8.25V9.16675ZM11.9167 9.16675H10.0833V11.0001H11.9167V9.16675ZM15.5833 9.16675H13.75V11.0001H15.5833V9.16675ZM17.4167 2.75008H16.5V0.916748H14.6667V2.75008H7.33333V0.916748H5.5V2.75008H4.58333C3.56583 2.75008 2.75 3.57508 2.75 4.58341V17.4167C2.75 17.903 2.94315 18.3693 3.28697 18.7131C3.63079 19.0569 4.0971 19.2501 4.58333 19.2501H17.4167C17.9029 19.2501 18.3692 19.0569 18.713 18.7131C19.0568 18.3693 19.25 17.903 19.25 17.4167V4.58341C19.25 4.09718 19.0568 3.63087 18.713 3.28705C18.3692 2.94324 17.9029 2.75008 17.4167 2.75008ZM17.4167 17.4167H4.58333V7.33342H17.4167V17.4167Z" />
+              </svg>
+            </span>
+          <span class="text">
+              تقویم
+            </span>
+        </a>
+      </li>
+      <li class="nav-item nav-item-has-children">
+        <a
+                href="#0"
+                class="collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#ddmenu_3"
+                aria-controls="ddmenu_3"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+              <span class="icon">
+                <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                          d="M12.9067 14.2908L15.2808 11.9167H6.41667V10.0833H15.2808L12.9067 7.70917L14.2083 6.41667L18.7917 11L14.2083 15.5833L12.9067 14.2908ZM17.4167 2.75C17.9029 2.75 18.3692 2.94315 18.713 3.28697C19.0568 3.63079 19.25 4.0971 19.25 4.58333V8.86417L17.4167 7.03083V4.58333H4.58333V17.4167H17.4167V14.9692L19.25 13.1358V17.4167C19.25 17.9029 19.0568 18.3692 18.713 18.713C18.3692 19.0568 17.9029 19.25 17.4167 19.25H4.58333C3.56583 19.25 2.75 18.425 2.75 17.4167V4.58333C2.75 3.56583 3.56583 2.75 4.58333 2.75H17.4167Z"
+                  />
+                </svg>
+              </span>
+          <span class="text">اهراز هویت</span>
+        </a>
+        <ul id="ddmenu_3" class="collapse dropdown-nav">
+          <li>
+            <a href="signin.html">ورود</a>
+          </li>
+          <li>
+            <a href="signup.html">ثبت نام</a>
+          </li>
+          <li>
+            <a href="reset-password.html">
+                <span class="text">
+                  بازیابی رمز عبور
+                </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <span class="divider"><hr /></span>
+      <li class="nav-item nav-item-has-children">
+        <a
+                href="#0"
+                class="collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#ddmenu_4"
+                aria-controls="ddmenu_4"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+              <span class="icon">
+                <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                          d="M3.66675 4.58325V16.4999H19.2501V4.58325H3.66675ZM5.50008 14.6666V6.41659H8.25008V14.6666H5.50008ZM10.0834 14.6666V11.4583H12.8334V14.6666H10.0834ZM17.4167 14.6666H14.6667V11.4583H17.4167V14.6666ZM10.0834 9.62492V6.41659H17.4167V9.62492H10.0834Z"
+                  />
+                </svg>
+              </span>
+          <span class="text">المان های طراحی</span>
+        </a>
+        <ul id="ddmenu_4" class="collapse dropdown-nav">
+          <li>
+            <a href="accordion.html">
+                <span class="text">
+                  آکاردئون
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="alerts.html"> هشدارها </a>
+          </li>
+          <li>
+            <a href="badges.html">بج ها</a>
+          </li>
+          <li>
+            <a href="buttons.html"> دکمه ها </a>
+          </li>
+          <li>
+            <a href="cards.html"> کارت ها </a>
+          </li>
+          <li>
+            <a href="dropdown.html">کشویی</a>
+          </li>
+          <li>
+            <a href="list.html">لیست</a>
+          </li>
+          <li>
+            <a href="modals.html">
+                <span class="text">
+                  مدال ها
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="progress-bars.html">
+              <span class="text">نوار پیشرفت</span>
+            </a>
+          </li>
+          <li>
+            <a href="tabs.html">
+                <span class="text">
+                  تب ها
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="typography.html"> نوشتار </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item nav-item-has-children">
+        <a
+                href="#0"
+                class="collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#ddmenu_55"
+                aria-controls="ddmenu_55"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+              <span class="icon">
+                <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                          d="M1.83325 19.25V17.4167H18.3333V19.25H1.83325ZM18.3333 7.33333V4.58333H16.4999V7.33333H18.3333ZM18.3333 2.75C18.8195 2.75 19.2858 2.94315 19.6296 3.28697C19.9734 3.63079 20.1666 4.0971 20.1666 4.58333V7.33333C20.1666 7.81956 19.9734 8.28588 19.6296 8.6297C19.2858 8.97351 18.8195 9.16667 18.3333 9.16667H16.4999V11.9167C16.4999 12.8891 16.1136 13.8218 15.426 14.5094C14.7383 15.197 13.8057 15.5833 12.8333 15.5833H7.33325C6.36079 15.5833 5.42816 15.197 4.74053 14.5094C4.05289 13.8218 3.66659 12.8891 3.66659 11.9167V2.75H18.3333ZM14.6666 4.58333H5.49992V11.9167C5.49992 12.4029 5.69307 12.8692 6.03689 13.213C6.38071 13.5568 6.84702 13.75 7.33325 13.75H12.8333C13.3195 13.75 13.7858 13.5568 14.1296 13.213C14.4734 12.8692 14.6666 12.4029 14.6666 11.9167V4.58333Z"
+                  />
+                </svg>
+              </span>
+          <span class="text">آیکن ها</span>
+        </a>
+        <ul id="ddmenu_55" class="collapse dropdown-nav">
+          <li>
+            <a href="icons.html"> آیکن های خطی </a>
+          </li>
+          <li>
+            <a href="mdi-icons.html">آیکن های متریال دیزاین</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item nav-item-has-children">
+        <a
+                href="#0"
+                class="collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#ddmenu_5"
+                aria-controls="ddmenu_5"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+        >
+              <span class="icon">
+                <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                          d="M13.75 4.58325H16.5L15.125 6.41659L13.75 4.58325ZM4.58333 1.83325H17.4167C18.4342 1.83325 19.25 2.65825 19.25 3.66659V18.3333C19.25 19.3508 18.4342 20.1666 17.4167 20.1666H4.58333C3.575 20.1666 2.75 19.3508 2.75 18.3333V3.66659C2.75 2.65825 3.575 1.83325 4.58333 1.83325ZM4.58333 3.66659V7.33325H17.4167V3.66659H4.58333ZM4.58333 18.3333H17.4167V9.16659H4.58333V18.3333ZM6.41667 10.9999H15.5833V12.8333H6.41667V10.9999ZM6.41667 14.6666H15.5833V16.4999H6.41667V14.6666Z"
+                  />
+                </svg>
+              </span>
+          <span class="text"> فرم ها </span>
+        </a>
+        <ul id="ddmenu_5" class="collapse dropdown-nav">
+          <li>
+            <a href="form-elements.html">المان های فرم</a>
+          </li>
+          <li>
+            <a href="form-layout.html">
+                <span class="text">
+                  لایه بندی فرم ها
+                </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a href="tables.html">
+              <span class="icon">
+                <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                          d="M4.58333 3.66675H17.4167C17.9029 3.66675 18.3692 3.8599 18.713 4.20372C19.0568 4.54754 19.25 5.01385 19.25 5.50008V16.5001C19.25 16.9863 19.0568 17.4526 18.713 17.7964C18.3692 18.1403 17.9029 18.3334 17.4167 18.3334H4.58333C4.0971 18.3334 3.63079 18.1403 3.28697 17.7964C2.94315 17.4526 2.75 16.9863 2.75 16.5001V5.50008C2.75 5.01385 2.94315 4.54754 3.28697 4.20372C3.63079 3.8599 4.0971 3.66675 4.58333 3.66675ZM4.58333 7.33341V11.0001H10.0833V7.33341H4.58333ZM11.9167 7.33341V11.0001H17.4167V7.33341H11.9167ZM4.58333 12.8334V16.5001H10.0833V12.8334H4.58333ZM11.9167 12.8334V16.5001H17.4167V12.8334H11.9167Z"
+                  />
+                </svg>
+              </span>
+          <span class="text">جدول ها</span>
+        </a>
+      </li>
+      <span class="divider"><hr /></span>
+      <li class="nav-item nav-item-has-children">
+        <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_77" aria-controls="ddmenu_77"
+           aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                        d="M14.6667 6.41667V2.75H12.8333V6.41667H9.16667V2.75H7.33333V6.41667C6.41667 6.41667 5.5 7.33333 5.5 8.25V13.2917L8.70833 16.5V19.25H13.2917V16.5L16.5 13.2917V8.25C16.5 7.33333 15.5833 6.41667 14.6667 6.41667ZM14.6667 12.5308L11.9992 15.2075L11.6142 15.5833H10.3858L10.01 15.2075L7.33333 12.5308V8.3325C7.33333 8.305 7.38833 8.25 7.41583 8.25H14.5933C14.6208 8.25 14.6667 8.305 14.6667 8.3325V12.5308Z" />
+              </svg>
+            </span>
+          <span class="text">افزونه ها</span>
+        </a>
+        <ul id="ddmenu_77" class="collapse dropdown-nav">
+          <li>
+            <a href="form-edit.html">
+                <span class="text">
+                  ویرایشگر ها
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="form-validation.html">
+                <span class="text">
+                  ارزیابی فرم ها
+                </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item nav-item-has-children">
+        <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_7" aria-controls="ddmenu_7"
+           aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                        d="M11.0001 2.75C6.94841 2.75 3.66675 4.39083 3.66675 6.41667V15.5833C3.66675 17.6092 6.95758 19.25 11.0001 19.25C15.0426 19.25 18.3334 17.6092 18.3334 15.5833V6.41667C18.3334 4.39083 15.0517 2.75 11.0001 2.75ZM16.5001 15.5833C16.5001 16.0417 14.5476 17.4167 11.0001 17.4167C7.45258 17.4167 5.50008 16.0417 5.50008 15.5833V13.5392C6.97591 14.2542 8.91008 14.6667 11.0001 14.6667C13.0901 14.6667 15.0242 14.2542 16.5001 13.5392V15.5833ZM16.5001 11.4125C15.3084 12.2833 13.2184 12.8333 11.0001 12.8333C8.78175 12.8333 6.69175 12.2833 5.50008 11.4125V8.83667C6.84758 9.5975 8.80925 10.0833 11.0001 10.0833C13.1909 10.0833 15.1526 9.5975 16.5001 8.83667V11.4125ZM11.0001 8.25C7.45258 8.25 5.50008 6.875 5.50008 6.41667C5.50008 5.95833 7.45258 4.58333 11.0001 4.58333C14.5476 4.58333 16.5001 5.95833 16.5001 6.41667C16.5001 6.875 14.5476 8.25 11.0001 8.25Z" />
+              </svg>
+            </span>
+          <span class="text">جداول اطلاعات</span>
+        </a>
+        <ul id="ddmenu_7" class="collapse dropdown-nav">
+          <li>
+            <a href="basic-table.html">
+                <span class="text">
+                  جدول پایه
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="tables-responsive.html">
+                <span class="text">
+                  جدول واکنش پذیر
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="datatables.html">
+                <span class="text">
+                  جدول اطلاعات
+                </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item nav-item-has-children">
+        <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#ddmenu_8" aria-controls="ddmenu_8"
+           aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.1666 19.25H1.83325V2.75H3.66659V17.4167H5.49992V9.16667H9.16659V17.4167H10.9999V5.5H14.6666V17.4167H16.4999V12.8333H20.1666V19.25Z" />
+              </svg>
+            </span>
+          <span class="text"> ترسیم اماری </span>
+        </a>
+        <ul id="ddmenu_8" class="collapse dropdown-nav">
+          <li>
+            <a href="chart-js.html">
+                <span class="text">
+                  ChartJs
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="apex-chart.html">
+                <span class="text">
+                  Apex Chart
+                </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a href="notification.html">
+              <span class="icon">
+                <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                          d="M9.16667 19.25H12.8333C12.8333 20.2584 12.0083 21.0834 11 21.0834C9.99167 21.0834 9.16667 20.2584 9.16667 19.25ZM19.25 17.4167V18.3334H2.75V17.4167L4.58333 15.5834V10.0834C4.58333 7.24171 6.41667 4.76671 9.16667 3.94171V3.66671C9.16667 2.65837 9.99167 1.83337 11 1.83337C12.0083 1.83337 12.8333 2.65837 12.8333 3.66671V3.94171C15.5833 4.76671 17.4167 7.24171 17.4167 10.0834V15.5834L19.25 17.4167ZM15.5833 10.0834C15.5833 7.51671 13.5667 5.50004 11 5.50004C8.43333 5.50004 6.41667 7.51671 6.41667 10.0834V16.5H15.5833V10.0834Z"
+                  />
+                </svg>
+              </span>
+          <span class="text">اعلان ها</span>
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+
+</aside>
+
+<div class="overlay"></div>
+<!-- ======== sidebar-nav end =========== -->
+
+<!-- ======== main-wrapper start =========== -->
+<main class="main-wrapper active">
+
+  <!-- ========== header start ========== -->
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-6">
+          <div class="header-left d-flex align-items-center">
+            <div class="menu-toggle-btn mx-2">
+              <button
+                      id="menu-toggle"
+                      class="main-btn primary-btn btn-hover"
+              >
+                <i class="lni lni-menu me-lg-2"></i>
+                <span class="d-none d-lg-inline-block">منو</span>
+                <!-- lni-chevron-left -->
+              </button>
+            </div>
+            <div class="header-search d-none d-md-flex">
+              <form action="#">
+                <input type="text" placeholder="جستجو..." />
+                <button><i class="lni lni-search-alt"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-7 col-6">
+          <div class="header-right">
+            <!-- notification start -->
+            <div class="notification-box ml-15 d-none d-md-flex">
+              <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="notification"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+              >
+                <i class="lni lni-alarm"></i>
+                <span>2</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="notification">
+                <li>
+                  <a href="#0">
+                    <div class="image">
+                      <img src="assets/images/lead/lead-6.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>
+                        نگین عبدالملکی
+                        <span class="text-regular">
+                              نظر کاربر برای یک محصول
+                            </span>
+                      </h6>
+                      <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                      </p>
+                      <span>10 دقیقه پیش</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0">
+                    <div class="image">
+                      <img src="assets/images/lead/lead-1.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>
+                        فرشته احمدی
+                        <span class="text-regular">
+                              نظر کاربر برای یک محصول
+                            </span>
+                      </h6>
+                      <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                      </p>
+                      <span>10 دقیقه پیش</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- notification end -->
+            <!-- message start -->
+            <div class="header-message-box ml-15 d-none d-md-flex">
+              <button
+                      class="dropdown-toggle"
+                      type="button"
+                      id="message"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+              >
+                <i class="lni lni-envelope"></i>
+                <span>3</span>
+              </button>
+              <ul
+                      class="dropdown-menu dropdown-menu-end"
+                      aria-labelledby="message"
+              >
+                <li>
+                  <a href="#0">
+                    <div class="image">
+                      <img src="assets/images/lead/lead-5.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>ابوالفضل بائو</h6>
+                      <p>سلام. امروز داشتم پروفایلتو میدیدم...</p>
+                      <span>10 دقیقه پیش</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0">
+                    <div class="image">
+                      <img src="assets/images/lead/lead-3.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>ساسان قربانی</h6>
+                      <p>ممکنه این قسمت رو تگاه بندازین؟</p>
+                      <span>12 دقیقه پیش</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0">
+                    <div class="image">
+                      <img src="assets/images/lead/lead-2.png" alt="" />
+                    </div>
+                    <div class="content">
+                      <h6>کومار درافتاده</h6>
+                      <p>برای امروز برنامه ای داری؟</p>
+                      <span>1 ساعت پیش</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- message end -->
+            <!-- filter start -->
+            <div class="filter-box ml-15 d-none d-md-flex">
+              <button class="" type="button" id="filter">
+                <i class="lni lni-funnel"></i>
+              </button>
+            </div>
+            <!-- filter end -->
+            <!-- profile start -->
+            <div class="profile-box ml-15">
+              <button
+                      class="dropdown-toggle bg-transparent border-0"
+                      type="button"
+                      id="profile"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+              >
+                <div class="profile-info">
+                  <div class="info">
+                    <h6>احمدرضا نوزعیم</h6>
+                    <div class="image">
+                      <img
+                              src="assets/images/profile/profile-1.png"
+                              alt=""
+                      />
+                      <span class="status"></span>
+                    </div>
+                  </div>
+                </div>
+                <i class="lni lni-chevron-down"></i>
+              </button>
+              <ul
+                      class="dropdown-menu dropdown-menu-end"
+                      aria-labelledby="profile"
+              >
+                <li>
+                  <a href="#0">
+                    <i class="lni lni-user"></i> پروفایل
+                  </a>
+                </li>
+                <li>
+                  <a href="#0">
+                    <i class="lni lni-alarm"></i>  اعلان ها
+                  </a>
+                </li>
+                <li>
+                  <a href="#0"> <i class="lni lni-inbox"></i> پیام ها </a>
+                </li>
+                <li>
+                  <a href="#0"> <i class="lni lni-cog"></i> تنظیمات </a>
+                </li>
+                <li>
+                  <a class="text-danger" href="#0"> <i class="lni lni-exit"></i> خروج </a>
+                </li>
+              </ul>
+            </div>
+            <!-- profile end -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ========== header end ========== -->
+
+    <!-- ========== section start ========== -->
+    <section class="section">
+      <div class="container-fluid">
+        <!-- ========== title-wrapper start ========== -->
+        <div class="title-wrapper pt-30">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <div class="title mb-30">
+                <h2>میز کار رمزارز</h2>
+              </div>
+            </div>
+            <!-- end col -->
+            <div class="col-md-6">
+              <div class="breadcrumb-wrapper mb-30">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="#0">میز کار</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      رمزارز
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+            <!-- end col -->
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- ========== title-wrapper end ========== -->
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-sm-6">
+            <div class="icon-card icon-card-3 mb-30">
+              <div class="card-content">
+                <div class="icon opacity-100 orange">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11 24V20.978H10V24H8V20.978H3.031L3.531 18H4.61C5.494 18 6 17.149 6 16.293V7.404C6 6.571 5.515 6 4.635 6H3V3H8V0H10V3H11V0H13V3.053C17.315 3.199 19.024 4.834 19.514 6.678C20.094 8.858 18.657 10.688 17.421 11.134C18.922 11.516 21 12.625 21 15.184C21 18.667 18.312 21 13 21V24H11ZM10 12.994V18C13.969 18 16.688 17.625 16.688 15.484C16.688 13.188 13.75 12.994 10 12.994ZM10 11C12.211 11 15.578 10.844 15.578 8.5C15.578 6.5 13.5 6 10 6V11Z"
+                      fill="white" />
+                  </svg>
+                </div>
+                <div class="content">
+                  <h3 class="text-bold mb-10">$ 1042.56</h3>
+                  <p class="text-success">
+                    +23.4%
+                    <span class="text-sm text-gray">این هفته</span>
+                  </p>
+                </div>
+              </div>
+              <div class="chart">
+                <canvas id="myChart1" style="width: 100%; height: 120px"></canvas>
+              </div>
+            </div>
+            <!-- End Icon Cart -->
+          </div>
+          <!-- End Col -->
+          <div class="col-xl-3 col-lg-4 col-sm-6">
+            <div class="icon-card icon-card-3 mb-30">
+              <div class="card-content">
+                <div class="icon opacity-100 purple">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12 0C5.3726 0 0 5.37259 0 12C0 18.6274 5.3726 24 12 24C18.6274 24 24 18.6274 24 12C23.9924 5.37573 18.6243 0.00758861 12 0ZM17.8879 10.6801C17.4417 11.0743 16.9264 11.3824 16.3679 11.5886C15.9727 11.7165 15.6111 11.9312 15.3098 12.2174C14.9098 13.1698 15.1554 14.2713 15.9227 14.9637C15.9488 14.9899 15.9734 15.0178 15.9962 15.0474C16.9614 16.2842 16.8633 18.0439 15.7668 19.1657C14.5528 20.3776 12.5865 20.3776 11.3722 19.1657C10.6039 18.2437 10.3529 16.9962 10.7044 15.8486C10.7894 15.1856 10.5626 14.5201 10.0899 14.0471C9.62091 13.5951 8.97062 13.383 8.3253 13.4711C7.17775 13.8222 5.93054 13.5703 5.009 12.8018C3.79556 11.5899 3.79448 9.62381 5.00637 8.4106C5.00717 8.40958 5.0082 8.40878 5.009 8.40798C6.13037 7.31066 7.89084 7.21254 9.1273 8.1786C9.99291 9.03392 11.2751 9.32192 11.9566 8.86341C12.2438 8.56283 12.4588 8.20106 12.5859 7.80529C12.7921 7.24734 13.0997 6.73254 13.4934 6.28682C14.7068 5.07333 16.6739 5.07333 17.8874 6.28659C19.1011 7.50003 19.1011 9.46712 17.8879 10.6806V10.6801Z"
+                      fill="white" />
+                    <path
+                      d="M14.7055 7.49748C14.4717 7.79777 14.2867 8.13314 14.158 8.4912C13.9234 9.1972 13.4902 9.82086 12.9108 10.2875C11.277 11.1648 9.25682 10.8256 7.99916 9.46275C7.44378 9.09023 6.70355 9.15509 6.22143 9.61863C5.67732 10.1619 5.6768 11.0437 6.22012 11.5878L6.22143 11.5889C6.54944 11.9156 7.01664 11.9674 8.0143 11.7848C8.21653 11.7482 8.42156 11.7296 8.62716 11.7296C9.62671 11.7458 10.5828 12.1408 11.3024 12.8345C12.1742 13.7064 12.5786 14.9415 12.3908 16.1603C12.2051 17.1555 12.2569 17.6243 12.5852 17.9531C13.1295 18.4964 14.011 18.4964 14.5554 17.9531C15.0257 17.4506 15.0723 16.685 14.666 16.1293C13.3378 14.8693 13.0181 12.8756 13.886 11.2634C14.3527 10.6843 14.9763 10.2517 15.6823 10.0178C16.0409 9.88858 16.3765 9.70257 16.6765 9.4672C17.2203 8.92309 17.2203 8.04102 16.6763 7.49719C16.1319 6.95336 15.2494 6.95336 14.7055 7.49748Z"
+                      fill="white" />
+                  </svg>
+                </div>
+                <div class="content">
+                  <h3 class="text-bold mb-10">$ 22,720</h3>
+                  <p class="text-success">
+                    +15.5%
+                    <span class="text-sm text-gray">این هفته</span>
+                  </p>
+                </div>
+              </div>
+              <div class="chart">
+                <canvas id="myChart2" style="width: 100%; height: 120px"></canvas>
+              </div>
+            </div>
+            <!-- End Icon Cart -->
+          </div>
+          <!-- End Col -->
+          <div class="col-xl-3 col-lg-4 col-sm-6">
+            <div class="icon-card icon-card-3 mb-30">
+              <div class="card-content">
+                <div class="icon opacity-100 primary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.26074 10.7537L12.3211 7.77143L19.1643 10.8299L12.3103 0L5.26074 10.7537ZM5.28247 14.0626L12.332 18.1551L19.5228 14.0626L12.3972 24L5.28247 14.0626Z"
+                      fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.3537 9.22998L5 12.332L12.3537 16.4245L19.501 12.4191L12.3537 9.22998Z" fill="white" />
+                  </svg>
+                </div>
+                <div class="content">
+                  <h3 class="text-bold mb-10">$ 168,1.09</h3>
+                  <p class="text-success">
+                    +35.3%
+                    <span class="text-sm text-gray">این هفته</span>
+                  </p>
+                </div>
+              </div>
+              <div class="chart">
+                <canvas id="myChart3" style="width: 100%; height: 120px"></canvas>
+              </div>
+            </div>
+            <!-- End Icon Cart -->
+          </div>
+          <!-- End Col -->
+          <div class="col-xl-3 col-lg-4 col-sm-6">
+            <div class="icon-card icon-card-3 mb-30">
+              <div class="card-content">
+                <div class="icon opacity-100 deep-blue">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                      <path
+                        d="M12 22.7013C17.9102 22.7013 22.7013 17.9102 22.7013 12C22.7013 6.08992 17.9102 1.29883 12 1.29883C6.08992 1.29883 1.29883 6.08992 1.29883 12C1.29883 17.9102 6.08992 22.7013 12 22.7013Z"
+                        fill="#345D9D" />
+                      <path
+                        d="M12 0C9.62663 0 7.30655 0.703788 5.33316 2.02236C3.35977 3.34094 1.8217 5.21509 0.913451 7.4078C0.00519937 9.60051 -0.232441 12.0133 0.230582 14.3411C0.693605 16.6689 1.83649 18.8071 3.51472 20.4853C5.19295 22.1635 7.33115 23.3064 9.65892 23.7694C11.9867 24.2324 14.3995 23.9948 16.5922 23.0866C18.7849 22.1783 20.6591 20.6402 21.9776 18.6668C23.2962 16.6935 24 14.3734 24 12C24.0046 10.4287 23.6996 8.87191 23.1026 7.41848C22.5055 5.96505 21.628 4.64345 20.5202 3.52915C19.4123 2.41484 18.0959 1.52965 16.646 0.924121C15.196 0.318589 13.641 0.00457211 12.0697 0H12ZM12.2034 12.4068L10.954 16.6199H17.6368C17.6811 16.6183 17.7252 16.6255 17.7667 16.641C17.8082 16.6565 17.8462 16.6801 17.8786 16.7103C17.911 16.7405 17.9371 16.7768 17.9554 16.8171C17.9738 16.8575 17.984 16.901 17.9855 16.9453V17.0557L17.4044 19.0605C17.3787 19.1553 17.3216 19.2386 17.2424 19.2967C17.1632 19.3548 17.0667 19.3842 16.9685 19.3801H6.74093L8.45521 13.54L6.53754 14.1211L6.97337 12.7845L8.89105 12.2034L11.3027 4.00969C11.3292 3.91541 11.3865 3.83272 11.4655 3.7748C11.5445 3.71688 11.6406 3.68705 11.7385 3.69007H14.3245C14.3687 3.68852 14.4129 3.69571 14.4544 3.71123C14.4958 3.72674 14.5339 3.75029 14.5662 3.78051C14.5986 3.81074 14.6247 3.84705 14.6431 3.88737C14.6614 3.92769 14.6716 3.97123 14.6731 4.0155V4.12591L12.6392 11.0412L14.5569 10.46L14.1501 11.8547L12.2034 12.4068Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="content">
+                  <h3 class="text-bold mb-10">$ 33.67,50</h3>
+                  <p class="text-success">
+                    +12.7%
+                    <span class="text-sm text-gray"> این هفته </span>
+                  </p>
+                </div>
+              </div>
+              <div class="chart">
+                <canvas id="myChart4" style="width: 100%; height: 120px"></canvas>
+              </div>
+            </div>
+            <!-- End Icon Cart -->
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="card-style mb-30">
+              <div class="title d-flex justify-content-between align-items-center">
+                <h6 class="mb-10">آمار فعلی</h6>
+                <div class="more-btn-wrapper mb-10">
+                  <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="lni lni-more-alt"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+                    <li class="dropdown-item">
+                      <a href="#0" class="text-gray">افزودن همه</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a href="#0" class="text-gray">حذف همه</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="chart">
+                <div id="doughnutChart1" style="width: 100%; height: 350px"></div>
+                <div class="doughnutChart-legend">
+                  <ul>
+                    <li class="primary">
+                      <span class="left">درآمد</span>
+                      <span class="right">49%</span>
+                    </li>
+                    <li class="orange">
+                      <span class="left">نصب </span>
+                      <span class="right">19%</span>
+                    </li>
+                    <li class="danger">
+                      <span class="left">هزینه </span>
+                      <span class="right">30%</span>
+                    </li>
+                    <li class="warning">
+                      <span class="left">سرمایه </span>
+                      <span class="right">5%</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end card -->
+          </div>
+          <!-- end col -->
+          <div class="col-lg-7">
+            <div class="card-style mb-30">
+              <div class="title d-flex flex-wrap align-items-center justify-content-between mb-10">
+                <div class="left">
+                  <h6 class="text-medium mb-2">نگاه کلی به بازار</h6>
+                  <p class="text-gray text-sm">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                  </p>
+                </div>
+                <div class="right">
+                  <div class="select-style-1 mb-2">
+                    <div class="select-position select-sm">
+                      <select class="light-bg">
+                        <option value="">ماهانه</option>
+                        <option value="">سالانه</option>
+                        <option value="">هفتگی</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- end select -->
+                </div>
+              </div>
+              <!-- End Title -->
+              <div class="chart">
+                <div id="legend3">
+                  <ul class="legend3 d-flex align-items-center mb-30">
+                    <li>
+                      <div class="d-flex">
+                        <span class="bg-color primary-bg"> </span>
+                        <div class="text">
+                          <p class="text-sm text-dark">ETH</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <span class="bg-color info-bg"></span>
+                        <div class="text">
+                          <p class="text-sm text-dark">XMR</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <span class="bg-color purple-bg"></span>
+                        <div class="text">
+                          <p class="text-sm text-dark">LTC</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex">
+                        <span class="bg-color success-bg"></span>
+                        <div class="text">
+                          <p class="text-sm text-dark">BTC</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <canvas id="Chart5" style="width: 100%; height: 400px"></canvas>
+              </div>
+            </div>
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card-style card-wrapper mb-30">
+              <div class="single-card-wrapper">
+                <div class="single-card purple-bg">
+                  <span class="text-sm text-white fw-500">حساب اصلی</span>
+                  <h3>$536,231.22</h3>
+                  <div class="card-info">
+                    <div class="mr-15">
+                      <span>VALID THRU</span>
+                      <p>8/12</p>
+                    </div>
+                    <div>
+                      <span>CARD HOLDER</span>
+                      <p>محمدامین حشمتیان</p>
+                    </div>
+                  </div>
+
+                  <span class="bg-shape">
+                    <svg width="330" height="200" viewBox="0 0 330 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="330"
+                        height="200">
+                        <rect width="330" height="200" rx="10" fill="#6647BF" />
+                      </mask>
+                      <g mask="url(#mask0)">
+                        <path opacity="0.3" d="M274 200C274 184.536 286.536 172 302 172V200H274Z" fill="white" />
+                        <path opacity="0.1" d="M246 172H274V200H246V172Z" fill="white" />
+                        <path opacity="0.3" d="M302 172C302 156.536 314.536 144 330 144V172H302Z" fill="white" />
+                        <path opacity="0.3" d="M246 172C246 156.536 258.536 144 274 144V172H246Z" fill="white" />
+                        <path opacity="0.6" d="M274 144C289.464 144 302 156.536 302 172H274V144Z" fill="white" />
+                        <circle opacity="0.05" cx="11.5" cy="9.5" r="99.5" fill="white" />
+                        <circle opacity="0.05" cx="11.5" cy="9.5" r="68.5" fill="white" />
+                        <circle opacity="0.08" cx="11.5" cy="9.5" r="35.5" fill="white" />
+                      </g>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="single-card-wrapper">
+                <div class="single-card primary-bg">
+                  <span class="text-sm text-white fw-500">حساب اصلی</span>
+                  <h3>$120,412.01</h3>
+                  <div class="card-info">
+                    <div class="mr-15">
+                      <span>VALID THRU</span>
+                      <p>4/21</p>
+                    </div>
+                    <div>
+                      <span>CARD HOLDER</span>
+                      <p>مهدی حضرتی</p>
+                    </div>
+                  </div>
+
+                  <span class="bg-shape">
+                    <svg width="330" height="200" viewBox="0 0 330 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="330"
+                        height="200">
+                        <rect width="330" height="200" rx="10" fill="#6647BF" />
+                      </mask>
+                      <g mask="url(#mask0)">
+                        <path opacity="0.3" d="M274 200C274 184.536 286.536 172 302 172V200H274Z" fill="white" />
+                        <path opacity="0.1" d="M246 172H274V200H246V172Z" fill="white" />
+                        <path opacity="0.3" d="M302 172C302 156.536 314.536 144 330 144V172H302Z" fill="white" />
+                        <path opacity="0.3" d="M246 172C246 156.536 258.536 144 274 144V172H246Z" fill="white" />
+                        <path opacity="0.6" d="M274 144C289.464 144 302 156.536 302 172H274V144Z" fill="white" />
+                        <circle opacity="0.05" cx="11.5" cy="9.5" r="99.5" fill="white" />
+                        <circle opacity="0.05" cx="11.5" cy="9.5" r="68.5" fill="white" />
+                        <circle opacity="0.08" cx="11.5" cy="9.5" r="35.5" fill="white" />
+                      </g>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="single-card-wrapper">
+                <div class="single-card success-bg">
+                  <span class="text-sm text-white fw-500">حساب اصلی</span>
+                  <h3>$255,233</h3>
+                  <div class="card-info">
+                    <div class="mr-15">
+                      <span>VALID THRU</span>
+                      <p>5/10</p>
+                    </div>
+                    <div>
+                      <span>CARD HOLDER</span>
+                      <p>سپهر بیرانوند</p>
+                    </div>
+                  </div>
+
+                  <span class="bg-shape">
+                    <svg width="330" height="200" viewBox="0 0 330 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="330"
+                        height="200">
+                        <rect width="330" height="200" rx="10" fill="#6647BF" />
+                      </mask>
+                      <g mask="url(#mask0)">
+                        <path opacity="0.3" d="M274 200C274 184.536 286.536 172 302 172V200H274Z" fill="white" />
+                        <path opacity="0.1" d="M246 172H274V200H246V172Z" fill="white" />
+                        <path opacity="0.3" d="M302 172C302 156.536 314.536 144 330 144V172H302Z" fill="white" />
+                        <path opacity="0.3" d="M246 172C246 156.536 258.536 144 274 144V172H246Z" fill="white" />
+                        <path opacity="0.6" d="M274 144C289.464 144 302 156.536 302 172H274V144Z" fill="white" />
+                        <circle opacity="0.05" cx="11.5" cy="9.5" r="99.5" fill="white" />
+                        <circle opacity="0.05" cx="11.5" cy="9.5" r="68.5" fill="white" />
+                        <circle opacity="0.08" cx="11.5" cy="9.5" r="35.5" fill="white" />
+                      </g>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="single-card-wrapper">
+                <div class="single-card danger-bg">
+                  <span class="text-sm text-white fw-500">حساب اصلی</span>
+                  <h3>$255,233</h3>
+                  <div class="card-info">
+                    <div class="mr-15">
+                      <span>VALID THRU</span>
+                      <p>5/10</p>
+                    </div>
+                    <div>
+                      <span>CARD HOLDER</span>
+                      <p>سپهر بیرانوند</p>
+                    </div>
+                  </div>
+
+                  <span class="bg-shape">
+                    <svg width="330" height="200" viewBox="0 0 330 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="330"
+                        height="200">
+                        <rect width="330" height="200" rx="10" fill="#6647BF" />
+                      </mask>
+                      <g mask="url(#mask0)">
+                        <path opacity="0.3" d="M274 200C274 184.536 286.536 172 302 172V200H274Z" fill="white" />
+                        <path opacity="0.1" d="M246 172H274V200H246V172Z" fill="white" />
+                        <path opacity="0.3" d="M302 172C302 156.536 314.536 144 330 144V172H302Z" fill="white" />
+                        <path opacity="0.3" d="M246 172C246 156.536 258.536 144 274 144V172H246Z" fill="white" />
+                        <path opacity="0.6" d="M274 144C289.464 144 302 156.536 302 172H274V144Z" fill="white" />
+                        <circle opacity="0.05" cx="11.5" cy="9.5" r="99.5" fill="white" />
+                        <circle opacity="0.05" cx="11.5" cy="9.5" r="68.5" fill="white" />
+                        <circle opacity="0.08" cx="11.5" cy="9.5" r="35.5" fill="white" />
+                      </g>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Row -->
+        <div class="row">
+          <div class="col-lg-6 col-xl-12 col-xxl-6">
+            <div class="card-style activity-card mb-30">
+              <div class="title d-flex flex-wrap align-items-center justify-content-between mb-10">
+                <div class="left mb-2">
+                  <h6 class="text-medium mb-2">فعالیت های اخیر</h6>
+                  <p class="text-gray text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                </div>
+                <div class="right mb-2">
+                  <div class="button-group">
+                    <a href="javascript:void(0)" class="active">ماهانه</a>
+                    <a href="javascript:void(0)">هفتگی</a>
+                    <a href="javascript:void(0)">امروز</a>
+                  </div>
+                </div>
+              </div>
+              <!-- End Title -->
+              <div class="table-responsive">
+                <table class="table activity-table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div class="icon orange-bg">
+                            <span class="status success-bg"></span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M6.41667 14V12.2372H5.83333V14H4.66667V12.2372H1.76808L2.05975 10.5H2.68917C3.20483 10.5 3.5 10.0036 3.5 9.50425V4.319C3.5 3.83308 3.21708 3.5 2.70375 3.5H1.75V1.75H4.66667V0H5.83333V1.75H6.41667V0H7.58333V1.78092C10.1004 1.86608 11.0973 2.81983 11.3832 3.8955C11.7215 5.16717 10.8832 6.23467 10.1622 6.49483C11.0378 6.71767 12.25 7.36458 12.25 8.85733C12.25 10.8891 10.682 12.25 7.58333 12.25V14H6.41667ZM5.83333 7.57983V10.5C8.14858 10.5 9.73467 10.2812 9.73467 9.03233C9.73467 7.693 8.02083 7.57983 5.83333 7.57983ZM5.83333 6.41667C7.12308 6.41667 9.08717 6.32567 9.08717 4.95833C9.08717 3.79167 7.875 3.5 5.83333 3.5V6.41667Z"
+                                fill="white" />
+                            </svg>
+                          </div>
+                          <span class="text-sm text-gray ms-2 fw-500">
+                            Bitcoin
+                          </span>
+                        </div>
+                      </td>
+                      <td class="time">
+                        <p class="text-sm fw-500 text-gray">06:24:45 AM</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">+$5,553</p>
+                      </td>
+                      <td class="text-end">
+                        <span class="status-btn">تکمیل شده</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div class="icon primary-bg">
+                            <span class="status danger-bg"></span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.06885 6.27302L7.18741 4.53333L11.1793 6.31746L7.18108 0L3.06885 6.27302ZM3.08152 8.20317L7.19375 10.5905L11.3884 8.20317L7.23177 14L3.08152 8.20317Z"
+                                fill="white" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.20639 5.38416L2.91675 7.19368L7.20639 9.58098L11.3757 7.24447L7.20639 5.38416Z"
+                                fill="white" />
+                            </svg>
+                          </div>
+                          <span class="text-sm text-gray ms-2 fw-500">
+                            Ethereum
+                          </span>
+                        </div>
+                      </td>
+                      <td class="time">
+                        <p class="text-sm fw-500 text-gray">06:24:45 AM</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">+$5,553</p>
+                      </td>
+                      <td class="text-end">
+                        <span class="status-btn">در انتظار</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div class="icon deep-blue-bg">
+                            <span class="status success-bg"></span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0)">
+                                <path
+                                  d="M6.99994 13.2423C10.4475 13.2423 13.2423 10.4475 13.2423 6.99994C13.2423 3.55237 10.4475 0.757568 6.99994 0.757568C3.55237 0.757568 0.757568 3.55237 0.757568 6.99994C0.757568 10.4475 3.55237 13.2423 6.99994 13.2423Z"
+                                  fill="#345D9D" />
+                                <path
+                                  d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32122C0.00303298 5.6003 -0.13559 7.00777 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73785 14 8.38447 14 7C14.0027 6.08342 13.8248 5.17528 13.4765 4.32745C13.1282 3.47961 12.6163 2.70868 11.9701 2.05867C11.3239 1.40866 10.5559 0.892298 9.71014 0.539071C8.86435 0.185843 7.95726 0.00266706 7.04068 0H7ZM7.11865 7.23729L6.38983 9.69492H10.2881C10.314 9.69401 10.3397 9.6982 10.3639 9.70726C10.3881 9.71631 10.4103 9.73004 10.4292 9.74767C10.4481 9.7653 10.4633 9.78648 10.474 9.81C10.4847 9.83352 10.4907 9.85892 10.4915 9.88475V9.94915L10.1525 11.1186C10.1376 11.1739 10.1043 11.2225 10.0581 11.2564C10.0119 11.2903 9.95555 11.3075 9.89831 11.3051H3.93221L4.93221 7.8983L3.81356 8.23729L4.0678 7.45763L5.18644 7.11864L6.59322 2.33898C6.60871 2.28399 6.64215 2.23576 6.68823 2.20197C6.7343 2.16818 6.79035 2.15078 6.84746 2.15254H8.35594C8.38176 2.15164 8.40751 2.15583 8.43171 2.16488C8.45591 2.17393 8.47809 2.18767 8.49698 2.2053C8.51587 2.22293 8.5311 2.24411 8.54179 2.26763C8.55249 2.29115 8.55845 2.31655 8.55932 2.34237V2.40678L7.37288 6.44068L8.49153 6.1017L8.25424 6.91525L7.11865 7.23729Z"
+                                  fill="white" />
+                              </g>
+                              <defs>
+                                <clipPath id="clip0">
+                                  <rect width="14" height="14" fill="white" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                          <span class="text-sm text-gray ms-2 fw-500">
+                            Litecoin
+                          </span>
+                        </div>
+                      </td>
+                      <td class="time">
+                        <p class="text-sm fw-500 text-gray">06:24:45 AM</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">+$5,553</p>
+                      </td>
+                      <td class="text-end">
+                        <span class="status-btn">تکمیل شده</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div class="icon purple-bg">
+                            <span class="status danger-bg"></span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M7 0C3.13402 0 0 3.13401 0 7C0 10.866 3.13402 14 7 14C10.866 14 14 10.866 14 7C13.9956 3.13584 10.8642 0.00442669 7 0ZM10.4346 6.23006C10.1743 6.45999 9.87372 6.63976 9.54792 6.76C9.31738 6.8346 9.10648 6.95986 8.93071 7.1268C8.69741 7.68237 8.84068 8.32494 9.28821 8.72884C9.30348 8.74411 9.31781 8.76041 9.33111 8.77767C9.89415 9.49911 9.83695 10.5256 9.19728 11.18C8.48911 11.887 7.3421 11.887 6.6338 11.18C6.18563 10.6421 6.03916 9.91445 6.24423 9.24504C6.29383 8.85824 6.16153 8.47004 5.8858 8.19417C5.6122 7.9305 5.23286 7.80674 4.85643 7.85817C4.18702 8.06294 3.45948 7.916 2.92192 7.4677C2.21408 6.76076 2.21345 5.61389 2.92038 4.90619C2.92085 4.90559 2.92145 4.90512 2.92192 4.90465C3.57605 4.26455 4.60299 4.20732 5.32426 4.77085C5.8292 5.26979 6.57717 5.43779 6.97467 5.17032C7.1422 4.99499 7.26764 4.78395 7.3418 4.55308C7.46204 4.22762 7.64147 3.92731 7.87114 3.66731C8.57898 2.95944 9.72645 2.95944 10.4343 3.66718C11.1423 4.37502 11.1423 5.52249 10.4346 6.23036V6.23006Z"
+                                fill="white" />
+                              <path
+                                d="M8.57819 4.37361C8.44179 4.54878 8.33389 4.74441 8.25882 4.95328C8.12195 5.36511 7.86925 5.72892 7.53128 6.00112C6.57821 6.51289 5.39977 6.31499 4.66613 5.52001C4.34217 5.30271 3.91036 5.34055 3.62913 5.61095C3.31173 5.92788 3.31143 6.44225 3.62836 6.75962C3.62866 6.75979 3.62883 6.76009 3.62913 6.76025C3.82046 6.95082 4.093 6.98106 4.67497 6.87452C4.79294 6.85319 4.91254 6.84235 5.03247 6.84235C5.61554 6.85179 6.17324 7.08222 6.59301 7.48686C7.10158 7.99546 7.33748 8.71596 7.22791 9.4269C7.11958 10.0075 7.14981 10.2809 7.34131 10.4727C7.65885 10.7896 8.17305 10.7896 8.49059 10.4727C8.76496 10.1796 8.79212 9.73297 8.55515 9.40887C7.78032 8.67386 7.59385 7.51082 8.10012 6.57042C8.37235 6.23258 8.73612 5.98022 9.14796 5.84378C9.35716 5.76842 9.55293 5.65991 9.72793 5.52261C10.0452 5.20521 10.0452 4.69068 9.72779 4.37344C9.41026 4.05621 8.89589 4.05637 8.57865 4.37378L8.57819 4.37361Z"
+                                fill="white" />
+                            </svg>
+                          </div>
+                          <span class="text-sm text-gray ms-2 fw-500">
+                            Ripple
+                          </span>
+                        </div>
+                      </td>
+                      <td class="time">
+                        <p class="text-sm fw-500 text-gray">06:24:45 AM</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">+$5,553</p>
+                      </td>
+                      <td class="text-end">
+                        <span class="status-btn">لغو شده</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div class="icon orange-bg">
+                            <span class="status success-bg"></span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M6.41667 14V12.2372H5.83333V14H4.66667V12.2372H1.76808L2.05975 10.5H2.68917C3.20483 10.5 3.5 10.0036 3.5 9.50425V4.319C3.5 3.83308 3.21708 3.5 2.70375 3.5H1.75V1.75H4.66667V0H5.83333V1.75H6.41667V0H7.58333V1.78092C10.1004 1.86608 11.0973 2.81983 11.3832 3.8955C11.7215 5.16717 10.8832 6.23467 10.1622 6.49483C11.0378 6.71767 12.25 7.36458 12.25 8.85733C12.25 10.8891 10.682 12.25 7.58333 12.25V14H6.41667ZM5.83333 7.57983V10.5C8.14858 10.5 9.73467 10.2812 9.73467 9.03233C9.73467 7.693 8.02083 7.57983 5.83333 7.57983ZM5.83333 6.41667C7.12308 6.41667 9.08717 6.32567 9.08717 4.95833C9.08717 3.79167 7.875 3.5 5.83333 3.5V6.41667Z"
+                                fill="white" />
+                            </svg>
+                          </div>
+                          <span class="text-sm text-gray ms-2 fw-500">
+                            Bitcoin
+                          </span>
+                        </div>
+                      </td>
+                      <td class="time">
+                        <p class="text-sm fw-500 text-gray">06:24:45 AM</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">+$5,553</p>
+                      </td>
+                      <td class="text-end">
+                        <span class="status-btn">تکمیل شده</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div class="icon primary-bg">
+                            <span class="status danger-bg"></span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.06885 6.27302L7.18741 4.53333L11.1793 6.31746L7.18108 0L3.06885 6.27302ZM3.08152 8.20317L7.19375 10.5905L11.3884 8.20317L7.23177 14L3.08152 8.20317Z"
+                                fill="white" />
+                              <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.20639 5.38416L2.91675 7.19368L7.20639 9.58098L11.3757 7.24447L7.20639 5.38416Z"
+                                fill="white" />
+                            </svg>
+                          </div>
+                          <span class="text-sm text-gray ms-2 fw-500">
+                            Ethereum
+                          </span>
+                        </div>
+                      </td>
+                      <td class="time">
+                        <p class="text-sm fw-500 text-gray">06:24:45 AM</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">+$5,553</p>
+                      </td>
+                      <td class="text-end">
+                        <span class="status-btn">در انتظار</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex">
+                          <div class="icon deep-blue-bg">
+                            <span class="status success-bg"></span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0)">
+                                <path
+                                  d="M6.99994 13.2423C10.4475 13.2423 13.2423 10.4475 13.2423 6.99994C13.2423 3.55237 10.4475 0.757568 6.99994 0.757568C3.55237 0.757568 0.757568 3.55237 0.757568 6.99994C0.757568 10.4475 3.55237 13.2423 6.99994 13.2423Z"
+                                  fill="#345D9D" />
+                                <path
+                                  d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32122C0.00303298 5.6003 -0.13559 7.00777 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73785 14 8.38447 14 7C14.0027 6.08342 13.8248 5.17528 13.4765 4.32745C13.1282 3.47961 12.6163 2.70868 11.9701 2.05867C11.3239 1.40866 10.5559 0.892298 9.71014 0.539071C8.86435 0.185843 7.95726 0.00266706 7.04068 0H7ZM7.11865 7.23729L6.38983 9.69492H10.2881C10.314 9.69401 10.3397 9.6982 10.3639 9.70726C10.3881 9.71631 10.4103 9.73004 10.4292 9.74767C10.4481 9.7653 10.4633 9.78648 10.474 9.81C10.4847 9.83352 10.4907 9.85892 10.4915 9.88475V9.94915L10.1525 11.1186C10.1376 11.1739 10.1043 11.2225 10.0581 11.2564C10.0119 11.2903 9.95555 11.3075 9.89831 11.3051H3.93221L4.93221 7.8983L3.81356 8.23729L4.0678 7.45763L5.18644 7.11864L6.59322 2.33898C6.60871 2.28399 6.64215 2.23576 6.68823 2.20197C6.7343 2.16818 6.79035 2.15078 6.84746 2.15254H8.35594C8.38176 2.15164 8.40751 2.15583 8.43171 2.16488C8.45591 2.17393 8.47809 2.18767 8.49698 2.2053C8.51587 2.22293 8.5311 2.24411 8.54179 2.26763C8.55249 2.29115 8.55845 2.31655 8.55932 2.34237V2.40678L7.37288 6.44068L8.49153 6.1017L8.25424 6.91525L7.11865 7.23729Z"
+                                  fill="white" />
+                              </g>
+                              <defs>
+                                <clipPath id="clip0">
+                                  <rect width="14" height="14" fill="white" />
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                          <span class="text-sm text-gray ms-2 fw-500">
+                            Litecoin
+                          </span>
+                        </div>
+                      </td>
+                      <td class="time">
+                        <p class="text-sm fw-500 text-gray">06:24:45 AM</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">+$5,553</p>
+                      </td>
+                      <td class="text-end">
+                        <span class="status-btn">تکمیل شده</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- End Col -->
+          <div class="col-md-6 col-lg-3 col-xl-6 col-xxl-3">
+            <div class="card-style mb-30">
+              <div class="title d-flex flex-wrap align-items-center justify-content-between mb-10">
+                <div class="left">
+                  <h6 class="text-medium mb-2">سفارش فروش</h6>
+                </div>
+                <div class="right mb-2">
+                  <div class="more-btn-wrapper mb-10">
+                    <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="lni lni-more-alt"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+                      <li class="dropdown-item">
+                        <a href="#0" class="text-gray">افزودن همه</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a href="#0" class="text-gray">حذف همه</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End Title -->
+
+              <div class="select-style-1 mb-2">
+                <div class="select-position select-sm">
+                  <select class="radius-30">
+                    <option value="">Bitcion</option>
+                    <option value="">Ethereum</option>
+                    <option value="">Litecion</option>
+                  </select>
+                </div>
+              </div>
+              <!-- end select -->
+
+              <div class="table-responsive">
+                <table class="table sell-order-table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <h6 class="text-sm fw-500">قیمت</h6>
+                      </th>
+                      <th>
+                        <h6 class="text-sm fw-500">مقدار</h6>
+                      </th>
+                      <th class="text-end">
+                        <h6 class="text-sm fw-500">مجموع</h6>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- End Col -->
+          <div class="col-md-6 col-lg-3 col-xl-6 col-xxl-3">
+            <div class="card-style mb-30">
+              <div class="title d-flex flex-wrap align-items-center justify-content-between mb-10">
+                <div class="left">
+                  <h6 class="text-medium mb-2">سفارش خرید</h6>
+                </div>
+                <div class="right mb-2">
+                  <div class="more-btn-wrapper mb-10">
+                    <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="lni lni-more-alt"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+                      <li class="dropdown-item">
+                        <a href="#0" class="text-gray">افزودن همه</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a href="#0" class="text-gray">حذف همه</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End Title -->
+
+              <div class="select-style-1 mb-2">
+                <div class="select-position select-sm">
+                  <select class="radius-30">
+                    <option value="">Bitcion</option>
+                    <option value="">Ethereum</option>
+                    <option value="">Litecion</option>
+                  </select>
+                </div>
+              </div>
+              <!-- end select -->
+
+              <div class="table-responsive">
+                <table class="table sell-order-table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <h6 class="text-sm fw-500">قیمت</h6>
+                      </th>
+                      <th>
+                        <h6 class="text-sm fw-500">مقدار</h6>
+                      </th>
+                      <th class="text-end">
+                        <h6 class="text-sm fw-500">مجموع</h6>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">65.8</p>
+                      </td>
+                      <td>
+                        <p class="text-sm fw-500 text-gray">17.10</p>
+                      </td>
+                      <td class="text-end">
+                        <p class="text-sm fw-500 text-gray">$251,77</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+        <div class="row">
+          <div class="col-md-6 col-lg-4">
+            <div class="card-style mb-30">
+              <div class="title d-flex flex-wrap align-items-center justify-content-between mb-20">
+                <div class="left">
+                  <h6 class="text-medium mb-2">خرید رمزارز</h6>
+                </div>
+                <div class="right mb-2">
+                  <div class="more-btn-wrapper">
+                    <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="lni lni-more-alt"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+                      <li class="dropdown-item">
+                        <a href="#0" class="text-gray">افزودن همه</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a href="#0" class="text-gray">حذف همه</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End Title -->
+              <form class="buy-sell-form">
+                <div class="field-group mb-20">
+                  <label for="" class="text-sm text-gray block mb-10">
+                    مقدار پول خود را وارد کنید
+                  </label>
+                  <div class="input-group">
+                    <input type="text" placeholder="10000" />
+                    <div class="select-style-1 mb-0">
+                      <div class="select-position">
+                        <select>
+                          <option value="">USD</option>
+                          <option value="">XMR</option>
+                          <option value="">BTC</option>
+                          <option value="">LTC</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field-group mb-20">
+                  <label for="" class="text-sm text-gray block mb-10">
+                    رمز ارز معادل
+                  </label>
+                  <div class="input-group">
+                    <input type="text" placeholder="0.253" />
+                    <div class="select-style-1 mb-0">
+                      <div class="select-position">
+                        <select>
+                          <option value="">BTC</option>
+                          <option value="">XMR</option>
+                          <option value="">USD</option>
+                          <option value="">LTC</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="buy-sell-btn">
+                  <button class="main-btn btn-sm success-btn">
+                    Buy Coins
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- End Col -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card-style mb-30">
+              <div class="title d-flex flex-wrap align-items-center justify-content-between mb-20">
+                <div class="left">
+                  <h6 class="text-medium mb-2">فروش رمزارز</h6>
+                </div>
+                <div class="right mb-2">
+                  <div class="more-btn-wrapper">
+                    <button class="more-btn dropdown-toggle" id="moreAction" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="lni lni-more-alt"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="moreAction">
+                      <li class="dropdown-item">
+                        <a href="#0" class="text-gray">افزودن همه</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a href="#0" class="text-gray">حذف همه</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- End Title -->
+              <form class="buy-sell-form">
+                <div class="field-group mb-20">
+                  <label for="" class="text-sm text-gray block mb-10">
+                    مقدار رمزارز خود را وارد کنید
+                  </label>
+                  <div class="input-group">
+                    <input type="text" placeholder="0.456" />
+                    <div class="select-style-1 mb-0">
+                      <div class="select-position">
+                        <select>
+                          <option value="">BTC</option>
+                          <option value="">XMR</option>
+                          <option value="">USD</option>
+                          <option value="">LTC</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field-group mb-20">
+                  <label for="" class="text-sm text-gray block mb-10">
+                    مقدار پول معادل
+                  </label>
+                  <div class="input-group">
+                    <input type="text" placeholder="2,356" />
+                    <div class="select-style-1 mb-0">
+                      <div class="select-position">
+                        <select>
+                          <option value="">USD</option>
+                          <option value="">XMR</option>
+                          <option value="">BTC</option>
+                          <option value="">LTC</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="buy-sell-btn">
+                  <button class="main-btn btn-sm danger-btn">
+                    Sell Coins
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- End Col -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card-style mb-30">
+              <div class="title d-flex flex-wrap align-items-center justify-content-between">
+                <div class="left">
+                  <h6 class="text-medium mb-2">جابجایی سریع</h6>
+                </div>
+              </div>
+              <!-- End Title -->
+              <form class="buy-sell-form">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="input-group-2 mb-10">
+                      <label>از</label>
+
+                      <div class="select-style-1 mb-0">
+                        <div class="select-position">
+                          <select>
+                            <option value="">USD</option>
+                            <option value="">XMR</option>
+                            <option value="">BTC</option>
+                            <option value="">LTC</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="input-group-2 mb-10">
+                      <label>به</label>
+
+                      <div class="select-style-1 mb-0">
+                        <div class="select-position">
+                          <select>
+                            <option value="">USD</option>
+                            <option value="">XMR</option>
+                            <option value="">BTC</option>
+                            <option value="">LTC</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field-group field-group-2 mb-10">
+                  <label for="" class="text-gray block mb-10"> مقدار </label>
+                  <div class="input-group">
+                    <input type="text" placeholder="10000" />
+                    <span> BTC </span>
+                  </div>
+                </div>
+                <div class="field-group field-group-2 mb-10">
+                  <label for="" class="text-gray block mb-10">
+                    قیمت برای BTC
+                  </label>
+                  <div class="input-group">
+                    <input type="text" placeholder="0.253" />
+                    <span> USD </span>
+                  </div>
+                </div>
+                <div class="buy-sell-btn">
+                  <button class="main-btn btn-sm primary-btn">
+                    Transfer Now
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- end container -->
+    </section>
+    <!-- ========== section end ========== -->
+
+    <!-- ========== footer start =========== -->
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 order-last order-md-first">
+            <div class="copyright text-center text-md-start">
+              <p class="text-sm">
+                توسعه داده شده توسط
+                <a
+                        href="https://iamami.ir"
+                        rel="nofollow"
+                        target="_blank"
+                >
+                  IAMAMI
+                </a>
+                و
+                <a
+                        href="https://demo.plainadmin.com/"
+                        rel="nofollow"
+                        target="_blank"
+                >
+                  PlainAdmin
+                </a>
+              </p>
+            </div>
+          </div>
+          <!-- end col-->
+          <div class="col-md-6">
+            <div
+                    class="
+                  terms
+                  d-flex
+                  justify-content-center justify-content-md-end
+                "
+            >
+              <a href="#0" class="text-sm">قوانین و شرایط ما</a>
+              <a href="#0" class="text-sm ms-3">حریم خصوصی و سیاست ما</a>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </footer>
+    <!-- ========== footer end =========== -->
+  </main>
+  <!-- ======== main-wrapper end =========== -->
+
+
+
+  <!-- ========= All Javascript files linkup ======== -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/Chart.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+  <script src="assets/js/dynamic-pie-chart.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/fullcalendar.js"></script>
+  <script src="assets/js/jvectormap.min.js"></script>
+  <script src="assets/js/world-merc.js"></script>
+  <script src="assets/js/polyfill.js"></script>
+  <script src="assets/js/quill.min.js"></script>
+  <script src="assets/js/datatable.js"></script>
+  <script src="assets/js/Sortable.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // ================== chart one start
+    const ctx1 = document.getElementById("myChart1").getContext("2d");
+    const gradient1 = ctx1.createLinearGradient(0, 0, 0, 180);
+    gradient1.addColorStop(0, "rgba(250, 157, 42, 0.2)");
+    gradient1.addColorStop(0.25, "rgba(250, 157, 42, 0.1)");
+    gradient1.addColorStop(1, "rgba(250, 157, 42, 0)");
+
+    const chart1 = new Chart(ctx1, {
+      // The type of chart we want to create
+      type: "line", // also try bar or other graph types
+
+      // The data for our dataset
+      data: {
+        labels: [
+          "Jan 2020",
+          "Fab 2020",
+          "Mar 2020",
+          "Apr 2020",
+          "May 2020",
+          "Jun 2020",
+          "Jul 2020",
+          "Aug 2020",
+          "Sep 2020",
+          "Oct 2020",
+          "Nov 2020",
+          "Dec 2020",
+        ],
+        // Information about the dataset
+        datasets: [
+          {
+            label: "",
+            backgroundColor: gradient1,
+            borderColor: "#FA9D2A",
+            data: [23, 70, 31, 78, 49, 70, 30, 50, 80, 20, 50, 99],
+            pointBackgroundColor: "transparent",
+            pointHoverBackgroundColor: "#FA9D2A",
+            pointBorderColor: "transparent",
+            pointHoverBorderColor: "#fff",
+            pointHoverBorderWidth: 3,
+            pointBorderWidth: 3,
+            pointRadius: 7,
+            pointHoverRadius: 7,
+          },
+        ],
+      },
+
+      // Configuration options
+      options: {
+        tooltips: {
+          intersect: false,
+          backgroundColor: "#fff9f4",
+          bodyFontColor: "rgba(250, 157, 42, 1)",
+          bodyFontStyle: "700",
+          bodyFontFamily: "Inter",
+          bodyFontSize: 16,
+          titleFontSize: 0,
+          multiKeyBackground: "transparent",
+          xPadding: 10,
+          yPadding: 15,
+          displayColors: false,
+          cornerRadius: 15,
+          position: "average",
+        },
+
+        title: {
+          display: false,
+        },
+
+        layout: {
+          padding: {
+            top: 50,
+            bottom: 12,
+            left: 12,
+            right: 12,
+          },
+        },
+        legend: {
+          display: false,
+        },
+        title: {
+          display: false,
+        },
+
+        scales: {
+          yAxes: [
+            {
+              gridLines: {
+                display: false,
+                drawTicks: false,
+                drawBorder: false,
+              },
+              ticks: {
+                display: false,
+                min: 0,
+                max: 120,
+              },
+            },
+          ],
+          xAxes: [
+            {
+              scaleLabel: {
+                display: false,
+              },
+              gridLines: {
+                display: false,
+                drawTicks: false,
+                drawBorder: false,
+              },
+              ticks: {
+                display: false,
+              },
+            },
+          ],
+        },
+      },
+    });
+    // =========== chart one end
+
+    // ================== chart two start
+    const ctx2 = document.getElementById("myChart2").getContext("2d");
+    const gradient2 = ctx2.createLinearGradient(0, 0, 0, 180);
+    gradient2.addColorStop(0, "rgba(155, 81, 224, 0.2)");
+    gradient2.addColorStop(0.25, "rgba(155, 81, 224, 0.1)");
+    gradient2.addColorStop(1, "rgba(155, 81, 224, 0)");
+
+    const chart2 = new Chart(ctx2, {
+      // The type of chart we want to create
+      type: "line", // also try bar or other graph types
+
+      // The data for our dataset
+      data: {
+        labels: [
+          "Jan 2020",
+          "Fab 2020",
+          "Mar 2020",
+          "Apr 2020",
+          "May 2020",
+          "Jun 2020",
+          "Jul 2020",
+          "Aug 2020",
+          "Sep 2020",
+          "Oct 2020",
+          "Nov 2020",
+          "Dec 2020",
+        ],
+        // Information about the dataset
+        datasets: [
+          {
+            label: "",
+            backgroundColor: gradient2,
+            borderColor: "#9B51E0",
+            data: [20, 80, 15, 78, 41, 85, 26, 90, 60, 80, 48, 99],
+            pointBackgroundColor: "transparent",
+            pointHoverBackgroundColor: "#9B51E0",
+            pointBorderColor: "transparent",
+            pointHoverBorderColor: "#fff",
+            pointHoverBorderWidth: 3,
+            pointBorderWidth: 3,
+            pointRadius: 7,
+            pointHoverRadius: 7,
+          },
+        ],
+      },
+
+      // Configuration options
+      options: {
+        tooltips: {
+          intersect: false,
+          backgroundColor: "#f2e4ff",
+          bodyFontColor: "rgba(155, 81, 224, 1)",
+          bodyFontStyle: "700",
+          bodyFontFamily: "Inter",
+          bodyFontSize: 16,
+          titleFontSize: 0,
+          multiKeyBackground: "transparent",
+          xPadding: 10,
+          yPadding: 15,
+          displayColors: false,
+          cornerRadius: 15,
+          position: "average",
+        },
+
+        title: {
+          display: false,
+        },
+
+        layout: {
+          padding: {
+            top: 50,
+            bottom: 12,
+            left: 12,
+            right: 12,
+          },
+        },
+        legend: {
+          display: false,
+        },
+        title: {
+          display: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              scaleLabel: {
+                display: false,
+              },
+              gridLines: {
+                display: false,
+                drawTicks: false,
+                drawBorder: false,
+              },
+              ticks: {
+                display: false,
+                min: 0,
+                max: 120,
+              },
+            },
+          ],
+          xAxes: [
+            {
+              scaleLabel: {
+                display: false,
+              },
+              gridLines: {
+                display: false,
+                drawTicks: false,
+                drawBorder: false,
+              },
+              ticks: {
+                display: false,
+              },
+            },
+          ],
+        },
+      },
+    });
+    // =========== chart two end
+    // ================== chart three start
+    const ctx3 = document.getElementById("myChart3").getContext("2d");
+    const gradient3 = ctx3.createLinearGradient(0, 0, 0, 180);
+    gradient3.addColorStop(0, "rgba(98, 126, 234, 0.2)");
+    gradient3.addColorStop(0.25, "rgba(98, 126, 234, 0.1)");
+    gradient3.addColorStop(1, "rgba(98, 126, 234, 0)");
+
+    const chart3 = new Chart(ctx3, {
+      // The type of chart we want to create
+      type: "line", // also try bar or other graph types
+
+      // The data for our dataset
+      data: {
+        labels: [
+          "Jan 2020",
+          "Fab 2020",
+          "Mar 2020",
+          "Apr 2020",
+          "May 2020",
+          "Jun 2020",
+          "Jul 2020",
+          "Aug 2020",
+          "Sep 2020",
+          "Oct 2020",
+          "Nov 2020",
+          "Dec 2020",
+        ],
+        // Information about the dataset
+        datasets: [
+          {
+            label: "",
+            backgroundColor: gradient3,
+            borderColor: "#627EEA",
+            data: [56, 20, 61, 38, 90, 61, 99, 60, 30, 80, 40, 99],
+            pointBackgroundColor: "transparent",
+            pointHoverBackgroundColor: "#627EEA",
+            pointBorderColor: "transparent",
+            pointHoverBorderColor: "#fff",
+            pointHoverBorderWidth: 3,
+            pointBorderWidth: 3,
+            pointRadius: 7,
+            pointHoverRadius: 7,
+          },
+        ],
+      },
+
+      // Configuration options
+      options: {
+        tooltips: {
+          intersect: false,
+          backgroundColor: "#ebf3fd",
+          bodyFontColor: "rgba(98, 126, 234, 1)",
+          bodyFontStyle: "700",
+          bodyFontFamily: "Inter",
+          bodyFontSize: 16,
+          titleFontSize: 0,
+          multiKeyBackground: "transparent",
+          xPadding: 10,
+          yPadding: 15,
+          displayColors: false,
+          cornerRadius: 15,
+          position: "average",
+        },
+
+        title: {
+          display: false,
+        },
+
+        layout: {
+          padding: {
+            top: 50,
+            bottom: 12,
+            left: 12,
+            right: 12,
+          },
+        },
+        legend: {
+          display: false,
+        },
+        title: {
+          display: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              scaleLabel: {
+                display: false,
+              },
+              gridLines: {
+                display: false,
+                drawTicks: false,
+                drawBorder: false,
+              },
+              ticks: {
+                display: false,
+                min: 0,
+                max: 120,
+              },
+            },
+          ],
+          xAxes: [
+            {
+              scaleLabel: {
+                display: false,
+              },
+              gridLines: {
+                display: false,
+                drawTicks: false,
+                drawBorder: false,
+              },
+              ticks: {
+                display: false,
+              },
+            },
+          ],
+        },
+      },
+    });
+    // =========== chart three end
+    // ================== chart four start
+    const ctx4 = document.getElementById("myChart4").getContext("2d");
+    const gradient4 = ctx4.createLinearGradient(0, 0, 0, 180);
+    gradient4.addColorStop(0, "rgba(52, 93, 157, 0.2)");
+    gradient4.addColorStop(0.25, "rgba(52, 93, 157, 0.1)");
+    gradient4.addColorStop(1, "rgba(52, 93, 157, 0)");
+
+    const chart4 = new Chart(ctx4, {
+      // The type of chart we want to create
+      type: "line", // also try bar or other graph types
+
+      // The data for our dataset
+      data: {
+        labels: [
+          "Jan 2020",
+          "Fab 2020",
+          "Mar 2020",
+          "Apr 2020",
+          "May 2020",
+          "Jun 2020",
+          "Jul 2020",
+          "Aug 2020",
+          "Sep 2020",
+          "Oct 2020",
+          "Nov 2020",
+          "Dec 2020",
+        ],
+        // Information about the dataset
+        datasets: [
+          {
+            label: "",
+            backgroundColor: gradient4,
+            borderColor: "#345D9D",
+            data: [90, 40, 80, 30, 65, 50, 79, 20, 90, 40, 70, 99],
+            pointBackgroundColor: "transparent",
+            pointHoverBackgroundColor: "#345D9D",
+            pointBorderColor: "transparent",
+            pointHoverBorderColor: "#fff",
+            pointHoverBorderWidth: 3,
+            pointBorderWidth: 3,
+            pointRadius: 7,
+            pointHoverRadius: 7,
+          },
+        ],
+      },
+
+      // Configuration options
+      options: {
+        tooltips: {
+          intersect: false,
+          backgroundColor: "#e7f0ff",
+          bodyFontColor: "rgba(52, 93, 157, 1)",
+          bodyFontStyle: "700",
+          bodyFontFamily: "Inter",
+          bodyFontSize: 16,
+          titleFontSize: 0,
+          multiKeyBackground: "transparent",
+          xPadding: 10,
+          yPadding: 15,
+          displayColors: false,
+          cornerRadius: 15,
+        },
+
+        title: {
+          display: false,
+        },
+
+        layout: {
+          padding: {
+            top: 50,
+            bottom: 12,
+            left: 12,
+            right: 12,
+          },
+        },
+        legend: {
+          display: false,
+        },
+        title: {
+          display: false,
+        },
+        scales: {
+          yAxes: [
+            {
+              scaleLabel: {
+                display: false,
+              },
+              gridLines: {
+                display: false,
+                drawTicks: false,
+                drawBorder: false,
+              },
+              ticks: {
+                display: false,
+                min: 0,
+                max: 120,
+              },
+            },
+          ],
+          xAxes: [
+            {
+              scaleLabel: {
+                display: false,
+              },
+              gridLines: {
+                display: false,
+                drawTicks: false,
+                drawBorder: false,
+              },
+              ticks: {
+                display: false,
+              },
+            },
+          ],
+        },
+      },
+    });
+    // =========== chart four end
+
+    //============ doughnutChart1 start
+
+    const doughnutChart1 = new ApexCharts(
+      document.querySelector("#doughnutChart1"),
+      (options = {
+        series: [83, 67, 55, 44],
+        chart: {
+          height: 350,
+          type: "radialBar",
+        },
+
+        plotOptions: {
+          radialBar: {
+            dataLabels: {
+              name: {
+                fontSize: "22px",
+              },
+              value: {
+                fontSize: "16px",
+              },
+            },
+            hollow: {
+              size: "40%",
+            },
+            track: {
+              strokeWidth: "100%",
+              margin: 10,
+            },
+          },
+        },
+        stroke: {
+          lineCap: "round",
+        },
+        labels: ["درآمد", "نصب", "هزینه ها", "سرمایه"],
+        colors: ["#4a6cf7", "#f2994a", "#d50100", "#f7c800"],
+      })
+    );
+    doughnutChart1.render();
+    //============ doughnutChart1 end
+
+    // =========== chart three start
+    const ctx5 = document.getElementById("Chart5").getContext("2d");
+    const chart5 = new Chart(ctx5, {
+      // The type of chart we want to create
+      type: "line", // also try bar or other graph types
+
+      // The data for our dataset
+      data: {
+        labels: [
+          "هفته 01",
+          "هفته 02",
+          "هفته 03",
+          "هفته 04",
+          "هفته 05",
+          "هفته 06",
+        ],
+        // Information about the dataset
+        datasets: [
+          {
+            label: "سری 1",
+            backgroundColor: "transparent",
+            borderColor: "#4A6CF7",
+            data: [80, 120, 110, 100, 130, 150, 115],
+            pointBackgroundColor: "transparent",
+            pointHoverBackgroundColor: "#4A6CF7",
+            pointBorderColor: "transparent",
+            pointHoverBorderColor: "#fff",
+            pointHoverBorderWidth: 3,
+            pointBorderWidth: 5,
+            pointRadius: 5,
+            pointHoverRadius: 8,
+          },
+          {
+            label: "سری 2",
+            backgroundColor: "transparent",
+            borderColor: "#97ca31",
+            data: [250, 160, 150, 140, 165, 210],
+            pointBackgroundColor: "transparent",
+            pointHoverBackgroundColor: "#97ca31",
+            pointBorderColor: "transparent",
+            pointHoverBorderColor: "#fff",
+            pointHoverBorderWidth: 3,
+            pointBorderWidth: 5,
+            pointRadius: 5,
+            pointHoverRadius: 8,
+          },
+          {
+            label: "سری 3",
+            backgroundColor: "transparent",
+            borderColor: "#9b51e0",
+            data: [210, 165, 140, 150, 160, 120],
+            pointBackgroundColor: "transparent",
+            pointHoverBackgroundColor: "#9b51e0",
+            pointBorderColor: "transparent",
+            pointHoverBorderColor: "#fff",
+            pointHoverBorderWidth: 3,
+            pointBorderWidth: 5,
+            pointRadius: 5,
+            pointHoverRadius: 8,
+          },
+          {
+            label: "سری 4",
+            backgroundColor: "transparent",
+            borderColor: "#219653",
+            data: [115, 150, 130, 100, 110, 120, 80],
+            pointBackgroundColor: "transparent",
+            pointHoverBackgroundColor: "#219653",
+            pointBorderColor: "transparent",
+            pointHoverBorderColor: "#fff",
+            pointHoverBorderWidth: 3,
+            pointBorderWidth: 5,
+            pointRadius: 5,
+            pointHoverRadius: 8,
+          },
+        ],
+      },
+
+      // Configuration options
+      options: {
+        tooltips: {
+          callbacks: {
+            labelColor: function (tooltipItem, chart) {
+              return {
+                backgroundColor: "rgba(104, 110, 255, .0)",
+              };
+            },
+          },
+          intersect: false,
+          backgroundColor: "#fbfbfb",
+          titleFontColor: "#8F92A1",
+          titleFontSize: 16,
+          titleFontFamily: "Inter",
+          titleFontStyle: "400",
+          bodyFontColor: "#171717",
+          bodyFontSize: 16,
+          multiKeyBackground: "transparent",
+          displayColors: false,
+          xPadding: 30,
+          yPadding: 15,
+          borderColor: "rgba(143, 146, 161, .1)",
+          borderWidth: 1,
+          title: false,
+        },
+
+        title: {
+          display: false,
+        },
+
+        layout: {
+          padding: {
+            top: 0,
+          },
+        },
+
+        legend: false,
+
+        scales: {
+          yAxes: [
+            {
+              gridLines: {
+                drawBorder: false,
+                color: "rgba(143, 146, 161, .1)",
+                zeroLineColor: "rgba(143, 146, 161, .1)",
+              },
+              ticks: {
+                padding: 35,
+                max: 300,
+                min: 50,
+              },
+            },
+          ],
+          xAxes: [
+            {
+              gridLines: {
+                display: false,
+                drawTicks: false,
+                drawBorder: false,
+              },
+              ticks: {
+                padding: 20,
+              },
+            },
+          ],
+        },
+      },
+    });
+      // =========== chart three end
+  </script>
+</body>
+
+</html>

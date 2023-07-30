@@ -1,0 +1,199 @@
+/* ============ signup css ============= */
+.auth-row {
+  background: $white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.auth-cover-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+
+  @media #{$xs} {
+    padding: 30px 20px;
+  }
+
+  .auth-cover {
+    .title {
+      text-align: cover;
+      margin-bottom: 40px;
+
+      @media #{$xs} {
+        h1 {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .cover-image {
+      max-width: 100%;
+      margin: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+    .shape-image {
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      bottom: 5%;
+    }
+  }
+}
+
+.signup-wrapper {
+  background: $white;
+  padding: 60px;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media #{$lg} {
+    padding: 40px;
+  }
+
+  @media #{$xs} {
+    padding: 30px;
+  }
+  .form-wrapper {
+    width: 100%;
+  }
+  .singup-option {
+    button {
+      font-size: 16px;
+      font-weight: 600;
+
+      @media #{$laptop} {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+
+      @media #{$lg} {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      @media #{$xs} {
+        width: 100%;
+      }
+
+      @media #{$sm} {
+        width: auto;
+      }
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* ============ Theme Change Css ============== */
+
+$color_1: rgba(213, 1, 0, 0.8);
+$color_2: #fff;
+$border-color_1: rgba(213, 1, 0, 0.8);
+
+.darkTheme {
+  .auth-row {
+    background: #262d3f;
+  }
+  .signup-wrapper {
+    background: #262d3f;
+    .danger-btn-outline {
+      background: transparent;
+      color: $color_1;
+      border-color: $border-color_1;
+      &:hover {
+        color: $color_2;
+        background: #d50100;
+      }
+    }
+  }
+}
+
+
+/* ============ reset-password css ============= */
+.auth-row {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+
+.auth-cover-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  @media #{$xs} {
+      padding: 30px 20px;
+  }
+
+
+  .auth-cover {
+    .title {
+      text-align: cover;
+      margin-bottom: 40px;
+      @media #{$xs} {
+        h1 {
+          font-size: 24px;
+        }
+      }
+    }
+    .cover-image {
+      max-width: 100%;
+      margin: auto;
+      img {
+        width: 100%;
+      }
+    }
+    .shape-image {
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      bottom: 5%;
+    }
+  }
+}
+
+.reset-password-wrapper {
+  background: #fff;
+  padding: 60px;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media #{$lg} {
+    padding: 40px;
+  }
+  @media #{$xs} {
+    padding: 30px;
+  }
+  .form-wrapper {
+    width: 100%;
+  }
+}
+
+/* ============ Theme Change Css ============== */
+
+.darkTheme {
+  .auth-row {
+    background: #262d3f;
+  }
+  .reset-password-wrapper {
+    background: #262d3f;
+  }
+}

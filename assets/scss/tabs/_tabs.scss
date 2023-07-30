@@ -1,0 +1,351 @@
+
+/* =========== tabs css ============== */
+/* ==== tab style 1 ==== */
+.tab-style-1 {
+
+  nav {
+
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+
+    button {
+      border: none;
+      background: transparent;
+      margin-right: 40px;
+      padding-bottom: 15px;
+      position: relative;
+      font-weight: 500;
+      color: #5d657b;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1.5px;
+        width: 0;
+        height: 3px;
+        background: #365CF5;
+        border-radius: 5px;
+        -webkit-transition: all 0.3s ease-out 0s;
+        -moz-transition: all 0.3s ease-out 0s;
+        -ms-transition: all 0.3s ease-out 0s;
+        -o-transition: all 0.3s ease-out 0s;
+        transition: all 0.3s ease-out 0s;
+      }
+      &:hover,
+      &.active {
+        color: #365CF5;
+      }
+      &:hover::after,
+      &.active::after {
+        width: 100%;
+      }
+    }
+
+  }
+
+  .tab-content p {
+    font-size: 14px;
+  }
+
+}
+
+/* ==== tab style 2 ==== */
+.tab-style-2 {
+
+  nav {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+
+    button {
+      border: none;
+      background: transparent;
+      margin-right: 20px;
+      padding: 10px 14px;
+      position: relative;
+      font-weight: 500;
+      color: #5d657b;
+    }
+    button::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      width: 0;
+      height: 1px;
+      background: #365CF5;
+      border-radius: 5px;
+      -webkit-transition: all 0.3s ease-out 0s;
+      -moz-transition: all 0.3s ease-out 0s;
+      -ms-transition: all 0.3s ease-out 0s;
+      -o-transition: all 0.3s ease-out 0s;
+      transition: all 0.3s ease-out 0s;
+    }
+    button:hover,
+    button.active {
+      color: #365CF5;
+      background: rgba(74, 108, 247, 0.1);
+    }
+    button:hover::after,
+    button.active::after {
+      width: 100%;
+    }
+
+  }
+
+  .tab-content p {
+    font-size: 14px;
+  }
+
+}
+
+/* ==== tab style 3 ==== */
+.tab-style-3 {
+  nav {
+    margin-bottom: 20px;
+
+    button {
+      margin-right: 20px;
+      padding: 10px 16px;
+      position: relative;
+      font-weight: 500;
+      font-size: 16px;
+
+      @media #{$laptop}{
+        margin-right: 10px;
+      }
+      @media #{$xs} {
+        margin-right: 5px;
+        font-size: 14px;
+        padding: 8px 14px;
+      }
+      @media #{$laptop}, #{$xs} {
+        i {
+          margin-right: 2px;
+        }
+      }
+
+      &:hover,
+      &.active {
+        color: #fff;
+        background: #365CF5;
+      }
+    }
+  }
+  .tab-content p {
+    font-size: 14px;
+  }
+}
+
+/* ==== tab style 4 ==== */
+.tab-style-4 {
+  nav {
+    margin-bottom: 10px;
+    display: inline-flex;
+    background: #efefef;
+    padding: 6px;
+    border-radius: 4px;
+    button {
+      margin-right: 20px;
+      padding: 10px 14px;
+      position: relative;
+      font-weight: 500;
+      border: none;
+      background: transparent;
+      border-radius: 4px;
+      color: #5d657b;
+      @media #{$xs} {
+        margin-right: 12px;
+      }
+
+
+      &:hover {
+        color: #fff;
+        background: #365CF5;
+      }
+      &.active {
+        color: #fff;
+        background: #365CF5;
+      }
+    }
+
+  }
+  .tab-content {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+/* ==== tab style 5 ==== */
+.tab-style-5 {
+  display: flex;
+  nav {
+    background: #fff;
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    padding: 4px;
+    margin-right: 30px;
+    height: 100%;
+    button {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      font-weight: 700;
+      border: none;
+      background: transparent;
+      border-radius: 4px;
+      color: #5d657b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      &::after {
+        content: "";
+        position: absolute;
+        right: -54px;
+        top: 50%;
+        @include transform(translateY(-50%) rotate(45deg));
+        width: 35px;
+        height: 35px;
+        background: #fff;
+        border: 1px solid #efefef;
+        border-right: 0px;
+        border-top: 0px;
+        display: none;
+      }
+      &:hover {
+        color: #fff;
+        background: #365CF5;
+      }
+      &.active {
+        color: #fff;
+        background: #365CF5;
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+  .tab-content {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+/* ==== tab style 6 ==== */
+.tab-style-6 {
+  nav {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+    button {
+      border: none;
+      background: transparent;
+      margin-right: 40px;
+      padding-bottom: 15px;
+      position: relative;
+      font-weight: 500;
+      color: #5d657b;
+      &:hover {
+        color: #365CF5;
+      }
+      &.active {
+        color: #365CF5;
+      }
+    }
+
+  }
+  .tab-content {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+/* ========= Theme Change Css ============= */
+.darkTheme {
+  .tab-style-1 {
+    nav {
+      border-color: rgba(239, 239, 239, 0.2);
+      button {
+        color: #fff;
+        &:hover {
+          color: #365CF5;
+        }
+      }
+      button.active {
+        color: #365CF5;
+      }
+    }
+  }
+  .tab-style-2 {
+    nav {
+      border-color: rgba(239, 239, 239, 0.2);
+      button {
+        color: #fff;
+        &:hover {
+          color: #365CF5;
+        }
+      }
+      button.active {
+        color: #365CF5;
+      }
+    }
+  }
+  .tab-style-6 {
+    nav {
+      border-color: rgba(239, 239, 239, 0.2);
+      button {
+        color: #fff;
+        &:hover {
+          color: #365CF5;
+        }
+      }
+      button.active {
+        color: #365CF5;
+      }
+    }
+  }
+  .tab-style-3 {
+    nav {
+      button {
+        background: rgba(47, 53, 70, 0.8);
+        &:hover {
+          color: #fff;
+          background: #365CF5;
+        }
+      }
+      button.active {
+        color: #fff;
+        background: #365CF5;
+      }
+    }
+  }
+  .tab-style-4 {
+    nav {
+      background: #2f3546;
+      button {
+        color: rgba(255, 255, 255, 0.5);
+        &:hover {
+          color: #fff;
+        }
+      }
+      button.active {
+        color: #fff;
+      }
+    }
+  }
+  .tab-style-5 {
+    nav {
+      background: #262d3f;
+      border-color: #2f3546;
+      button {
+        &::after {
+          background: #262d3f;
+          border-color: #2f3546;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+
+/* ========== List Bar css ========== */
+/* list base styles */
+
+.base-list-box {
+  border: 1px solid #DFE5EF;
+  border-radius: 7px;
+  padding: 24px 25px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      i {
+        color: #365CF5;
+        font-size: 16px;
+      }
+    }
+  }
+  .form-check {
+    padding-left: 28px;
+    min-height: 16px;
+    margin-bottom: 0;
+    label {
+      user-select: none;
+      cursor: pointer;
+    }
+  }
+  .form-check-input {
+    border-color: #DFE5EF;
+    width: 16px;
+    height: 16px;
+    margin-left: -28px;
+    margin-top: 3px;
+    cursor: pointer;
+    &:checked {
+      border-color: #365CF5;
+      background-color: #365CF5;
+    }
+  }
+}

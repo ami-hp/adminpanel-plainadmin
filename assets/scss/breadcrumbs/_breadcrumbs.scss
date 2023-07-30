@@ -1,0 +1,54 @@
+/* ========== Breadcrumb css ========== */
+/* breadcrumb base styles */
+.base-breadcrumb {
+  border-radius: 6px;
+  border: 1px solid #DFE5EF;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 17px 30px;
+
+  li,
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  li i,
+  a i {
+    line-height: 1;
+  }
+  li {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  li a,
+  li span {
+    display: flex;
+    color: #5d657b;
+  }
+  li.active {
+    color: #365CF5;
+  }
+}
+
+.breadcrumb-two {
+  gap: 12px;
+}
+.breadcrumb-two li {
+  gap: 12px;
+}
+.breadcrumb-two li span {
+  max-width: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #5d657b;
+}
+.breadcrumb-two a {
+  gap: 5px;
+}
+
+.breadcrumb-three a {
+  gap: 5px;
+}
