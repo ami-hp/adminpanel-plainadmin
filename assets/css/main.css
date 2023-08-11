@@ -6535,7 +6535,7 @@ h6,
 .sidebar-nav-wrapper {
   background: #fff;
   width: 250px;
-  padding: 20px 0px;
+  padding: 20px 0;
   height: 100vh;
   position: fixed;
   overflow-y: scroll;
@@ -6543,7 +6543,7 @@ h6,
   top: 0;
   left: 0;
   z-index: 99;
-  box-shadow: 0px 0px 30px rgba(200, 208, 216, 0.3);
+  box-shadow: 0 0 30px rgba(200, 208, 216, 0.3);
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
@@ -6557,27 +6557,27 @@ h6,
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .sidebar-nav-wrapper {
-    -webkit-transform: translateX(-260px);
-    -moz-transform: translateX(-260px);
-    -ms-transform: translateX(-260px);
-    -o-transform: translateX(-260px);
-    transform: translateX(-260px);
-  }
-}
-.sidebar-nav-wrapper.active {
-  -webkit-transform: translateX(-260px);
-  -moz-transform: translateX(-260px);
-  -ms-transform: translateX(-260px);
-  -o-transform: translateX(-260px);
-  transform: translateX(-260px);
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .sidebar-nav-wrapper.active {
     -webkit-transform: translateX(0px);
     -moz-transform: translateX(0px);
     -ms-transform: translateX(0px);
     -o-transform: translateX(0px);
     transform: translateX(0px);
+  }
+}
+.sidebar-nav-wrapper.active {
+  -webkit-transform: translateX(260px);
+  -moz-transform: translateX(260px);
+  -ms-transform: translateX(260px);
+  -o-transform: translateX(260px);
+  transform: translateX(260px);
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .sidebar-nav-wrapper.active {
+    -webkit-transform: translateX(260px);
+    -moz-transform: translateX(260px);
+    -ms-transform: translateX(260px);
+    -o-transform: translateX(260px);
+    transform: translateX(260px);
   }
 }
 .sidebar-nav-wrapper .navbar-logo {
@@ -6595,7 +6595,7 @@ h6,
 }
 .sidebar-nav-wrapper .sidebar-nav ul .nav-item {
   position: relative;
-  margin: 5px 0px;
+  margin: 5px 0;
 }
 .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children > a {
   color: #1A2142;
@@ -6637,13 +6637,13 @@ h6,
   transform: rotate(0deg);
 }
 .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children ul {
-  padding: 0px 15px;
+  padding: 0 15px;
 }
 .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children ul li {
   margin-bottom: 10px;
 }
 .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children ul li:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children ul li a {
   font-size: 14px;
@@ -6696,7 +6696,7 @@ h6,
   height: 100%;
   width: 4px;
   background: #365CF5;
-  border-radius: 0 3px 3px 0px;
+  border-radius: 0 3px 3px 0;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -6740,7 +6740,8 @@ h6,
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(3px);
   z-index: 11;
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -6828,7 +6829,7 @@ h6,
 }
 
 .promo-box {
-  box-shadow: 0px 10px 20px rgba(200, 208, 216, 0.3);
+  box-shadow: 0 10px 20px rgba(200, 208, 216, 0.3);
   padding: 24px 16px;
   text-align: center;
   max-width: 210px;
@@ -6852,9 +6853,19 @@ h6,
 }
 
 /* ====== Theme Change CSS ====== */
+.sidebar-nav-wrapper.style-2 .sidebar-nav ul .nav-item.nav-item-has-children ul li a.active, .sidebar-nav-wrapper.style-2 .sidebar-nav ul .nav-item.nav-item-has-children ul li a:hover {
+  color: #fff;
+  border-color: #365CF5;
+  background: #365CF5;
+}
+.sidebar-nav-wrapper.style-2 .sidebar-nav ul .nav-item.nav-item-has-children ul li a.active span.pro-badge, .sidebar-nav-wrapper.style-2 .sidebar-nav ul .nav-item.nav-item-has-children ul li a:hover span.pro-badge {
+  background: #fff;
+  color: #365CF5;
+}
+
 .darkTheme .sidebar-nav-wrapper {
   background: #262d3f;
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 .darkTheme .sidebar-nav-wrapper .sidebar-nav ul .nav-item.nav-item-has-children > a {
   color: #fff;
@@ -6922,7 +6933,7 @@ h6,
   color: #fff;
 }
 .darkTheme .promo-box {
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
 /* ========== Layout Change ============ */
@@ -6961,17 +6972,7 @@ h6,
   margin-right: 0;
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .rightSidebar .main-wrapper {
-    margin-right: 0;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .rightSidebar .main-wrapper {
-    margin-right: 0;
-  }
-}
-@media (max-width: 767px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .rightSidebar .main-wrapper {
     margin-right: 0;
   }
@@ -7035,9 +7036,9 @@ h6,
   font-size: 24px;
   color: #fff;
   border: none;
-  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   z-index: 99;
   border-radius: 4px;
   display: flex;
@@ -7099,7 +7100,7 @@ h6,
 }
 .option-header .option-btn-close {
   background: none;
-  border: 0px;
+  border: 0;
   margin-left: 5px;
 }
 .option-header .option-btn-close i {
@@ -7115,9 +7116,9 @@ h6,
   height: 100vh;
   overflow-y: auto;
   background: #fff;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   -webkit-transition: all all 0.3s ease-out 0s ease-out 0s;
   -moz-transition: all all 0.3s ease-out 0s ease-out 0s;
   -ms-transition: all all 0.3s ease-out 0s ease-out 0s;
@@ -7137,7 +7138,7 @@ h6,
   margin-right: 15px;
 }
 .option-box li:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .option-box li button {
   display: block;
@@ -9125,3 +9126,5 @@ h6,
   max-width: 330px;
   margin: 65px auto;
 }
+
+/*# sourceMappingURL=main.css.map */
