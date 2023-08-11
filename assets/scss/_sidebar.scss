@@ -2,7 +2,7 @@
 .sidebar-nav-wrapper {
   background: $white;
   width: 250px;
-  padding: 20px 0px;
+  padding: 20px 0;
   height: 100vh;
   position: fixed;
   overflow-y: scroll;
@@ -10,19 +10,19 @@
   top: 0;
   left: 0;
   z-index: 99;
-  box-shadow: 0px 0px 30px rgba(200, 208, 216, 0.3);
+  box-shadow: 0 0 30px rgba(200, 208, 216, 0.3);
   @include transition(0.3s);
   @include transform(translateX(0));
 
   @media #{$lg, $md, $xs} {
-    @include transform(translateX(-260px));
+    @include transform(translateX(0px));
   }
 
   &.active {
-    @include transform(translateX(-260px));
+    @include transform(translateX(260px));
 
     @media #{$lg, $md, $xs} {
-      @include transform(translateX(0px));
+      @include transform(translateX(260px));
     }
   }
 
@@ -46,7 +46,7 @@
     ul {
       .nav-item {
         position: relative;
-        margin: 5px 0px;
+        margin: 5px 0;
 
         &.nav-item-has-children {
           & > a {
@@ -83,12 +83,12 @@
           }
 
           ul {
-            padding: 0px 15px;
+            padding: 0 15px;
             li {
               margin-bottom: 10px;
 
               &:last-child {
-                margin-bottom: 0px;
+                margin-bottom: 0;
               }
 
               a {
@@ -151,7 +151,7 @@
             height: 100%;
             width: 4px;
             background: $primary;
-            border-radius: 0 3px 3px 0px;
+            border-radius: 0 3px 3px 0;
             opacity: 0;
             visibility: hidden;
             @include transition(0.3s);
@@ -197,6 +197,7 @@
       }
     }
   }
+
 }
 
 .overlay {
@@ -205,7 +206,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba($black, 0.3);
+  background: rgba($white, 0.3);
+  backdrop-filter: blur(3px);
   z-index: 11;
   @include transform(translateX(-100%));
   opacity: 0;
@@ -290,7 +292,7 @@
 }
 
 .promo-box {
-  box-shadow: 0px 10px 20px rgba(200, 208, 216, 0.3);
+  box-shadow: 0 10px 20px rgba(200, 208, 216, 0.3);
   padding: 24px 16px;
   text-align: center;
   max-width: 210px;
@@ -321,10 +323,26 @@ $color_2: #c2cbd6;
 $border-color_1: rgba(255, 255, 255, 0.15);
 $border-color_2: #365CF5;
 
+.sidebar-nav-wrapper.style-2{
+  .sidebar-nav ul .nav-item.nav-item-has-children ul li a{
+    &.active,
+    &:hover {
+      color: #fff;
+      border-color: #365CF5;
+      background: #365CF5;
+      span.pro-badge {
+        background: #fff;
+        color: #365CF5;
+      }
+    }
+
+  }
+}
+
 .darkTheme {
   .sidebar-nav-wrapper {
     background: #262d3f;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     .sidebar-nav {
       ul {
         .nav-item.nav-item-has-children {
@@ -428,10 +446,9 @@ $border-color_2: #365CF5;
     }
   }
   .promo-box {
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   }
 }
-
 
 /* ========== Layout Change ============ */
 
@@ -441,11 +458,7 @@ $border-color_2: #365CF5;
     right: 0;
 
     &.active {
-      -webkit-transform: translateX(260px);
-      -moz-transform: translateX(260px);
-      -ms-transform: translateX(260px);
-      -o-transform: translateX(260px);
-      transform: translateX(260px);
+      @include transform(translateX(260px));
     }
   }
   .overlay {
@@ -453,11 +466,7 @@ $border-color_2: #365CF5;
     right: 0;
     @include transform(translateX(100%));
     &.active {
-      -webkit-transform: translateX(0);
-      -moz-transform: translateX(0);
-      -ms-transform: translateX(0);
-      -o-transform: translateX(0);
-      transform: translateX(0);
+      @include transform(translateX(0));
     }
   }
   .main-wrapper {
@@ -469,27 +478,14 @@ $border-color_2: #365CF5;
   }
 }
 
-@media #{$lg} {
+@media #{$lg , $md , $xs} {
   .rightSidebar {
     .main-wrapper {
       margin-right: 0;
     }
   }
 }
-@media #{$md} {
-  .rightSidebar {
-    .main-wrapper {
-      margin-right: 0;
-    }
-  }
-}
-@media #{$xs} {
-  .rightSidebar {
-    .main-wrapper {
-      margin-right: 0;
-    }
-  }
-}
+
 
 .rightSidebar .sidebar-nav-wrapper .sidebar-nav ul .nav-item a .icon{
   transition: all 0.3s;
@@ -566,9 +562,9 @@ $border-color_1: #2f3546;
   font-size: 24px;
   color: #fff;
   border: none;
-  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   z-index: 99;
   border-radius: 4px;
   display: flex;
@@ -623,7 +619,7 @@ $color_1: #365CF5;
   }
   .option-btn-close {
     background: none;
-    border: 0px;
+    border: 0;
     margin-left: 5px;
     i {
       font-weight: 700;
@@ -639,7 +635,7 @@ $color_1: #365CF5;
   height: 100vh;
   overflow-y: auto;
   background: #fff;
-  @include box-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+  @include box-shadow(0 0 10px rgba(0, 0, 0, 0.2));
   @include transition(all 0.3s ease-out 0s);
   @include transform(translateX(100%));
   display: flex;
@@ -649,7 +645,7 @@ $color_1: #365CF5;
   li {
     margin-right: 15px;
     &:last-child {
-      margin-right: 0px;
+      margin-right: 0;
     }
     button {
       display: block;

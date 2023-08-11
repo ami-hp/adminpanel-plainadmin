@@ -1,3 +1,7 @@
+/**
+ * ========= Sidebar Start ========
+ */
+
 (function () {
   /* ========= sidebar toggle ======== */
   const sidebarNavWrapper = document.querySelector(".sidebar-nav-wrapper");
@@ -34,6 +38,12 @@
 
   });
 
+  const openMenu = () => {
+    sidebarNavWrapper.classList.remove("active");
+    overlay.classList.add("active");
+    mainWrapper.classList.remove("active");
+    changeMenuBtnIcon();
+  }
   const closeMenu = () => {
     sidebarNavWrapper.classList.add("active");
     overlay.classList.remove("active");
@@ -49,12 +59,21 @@
     closeMenu()
   });
 
+  if (window.innerWidth > 1199) {
+    openMenu();
+  }
+
 })();
 
+/**
+ * ========= Sidebar End ========
+ */
 
-// =========== theme change
 
 
+/**
+ * ========= Theme Change Start ========
+ */
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -74,6 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.classList.add('darkTheme');
       document.documentElement.setAttribute('data-bs-theme', 'dark');
       logo.setAttribute('src', darkSrc);
+
+      document.cookie = "darkmode=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+
       return "Dark Mode is on";
     }
     else{
@@ -82,9 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.classList.remove('darkTheme');
       document.documentElement.setAttribute('data-bs-theme', 'light');
       logo.setAttribute('src', lightSrc);
+      document.cookie = "darkmode=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
       return "Light Mode is on";
     }
-
   }
   const toggleStyle = () =>{ //Function to Toggle Style of Menu
 
@@ -94,10 +116,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if(attr.checked === "on"){
       styleButton.dataset.checked = "off";
       sideBar.classList.remove('style-2');
+      document.cookie = "style=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     }
     else{
       styleButton.dataset.checked = "on";
       sideBar.classList.add('style-2');
+      document.cookie = "style=two; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+
     }
   }
 
@@ -106,6 +131,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-
+/**
+ * ========= Theme Change End ========
+ */
 
 
