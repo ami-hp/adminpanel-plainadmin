@@ -77,57 +77,116 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  const darkThemeButton = document.getElementById("darkmode-toggle");
-  const styleButton = document.getElementById("stylemode-toggle");
-  const toggleTheme = () => { // Function to toggle the theme
+  class DarkMode {
+    constructor() {
+      this.darkThemeButton = document.getElementById('darkmode-toggle');
+      this.logo = document.querySelector('.navbar-logo img');
+      this.darkModeKey = 'darkMode';
+      this.lightSrc = this.logo.dataset.lightmode;
+      this.darkSrc = this.logo.dataset.darkmode;
 
-    const logo = document.querySelector(".navbar-logo img");
-    const lightSrc = logo.dataset.lightmode;
-    const darkSrc = logo.dataset.darkmode;
-    const attr = darkThemeButton.dataset;
+      this.initEventListeners();
 
-    //Check the Current Theme
-    if(attr.checked === "off"){
-      //to Dark Mode
-      darkThemeButton.dataset.checked = "on";
+      this.initCurrentMode();
+    }
+
+    initEventListeners() {
+      this.darkThemeButton.addEventListener('click', () => this.toggleTheme());
+    }
+
+    initCurrentMode() {
+      let local = localStorage.getItem(this.darkModeKey);
+      if (local === 'off') {
+        this.setLightMode();
+      } else {
+        this.setDarkMode();
+      }
+    }
+
+    toggleTheme() {
+      let local = localStorage.getItem(this.darkModeKey);
+      if (local === 'off') {
+        this.setDarkMode();
+      } else {
+        this.setLightMode();
+      }
+    }
+
+    setDarkMode() {
+      this.darkThemeButton.dataset.checked = 'on';
+      this.darkThemeButton.checked = true;
+
       document.body.classList.add('darkTheme');
       document.documentElement.setAttribute('data-bs-theme', 'dark');
-      logo.setAttribute('src', darkSrc);
 
-      document.cookie = "darkmode=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+      this.logo.setAttribute('src', this.darkSrc);
 
-      return "Dark Mode is on";
+      localStorage.setItem(this.darkModeKey, 'on');
     }
-    else{
-      //to Light Mode
-      darkThemeButton.dataset.checked = "off";
+
+    setLightMode() {
+      this.darkThemeButton.dataset.checked = 'off';
+      this.darkThemeButton.checked = false;
+
       document.body.classList.remove('darkTheme');
       document.documentElement.setAttribute('data-bs-theme', 'light');
-      logo.setAttribute('src', lightSrc);
-      document.cookie = "darkmode=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-      return "Light Mode is on";
-    }
-  }
-  const toggleStyle = () =>{ //Function to Toggle Style of Menu
 
-    const sideBar = document.querySelector(".sidebar-nav-wrapper");
-    let attr = styleButton.dataset;
+      this.logo.setAttribute('src', this.lightSrc);
 
-    if(attr.checked === "on"){
-      styleButton.dataset.checked = "off";
-      sideBar.classList.remove('style-2');
-      document.cookie = "style=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    }
-    else{
-      styleButton.dataset.checked = "on";
-      sideBar.classList.add('style-2');
-      document.cookie = "style=two; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-
+      localStorage.setItem(this.darkModeKey, 'off');
     }
   }
 
-  darkThemeButton.addEventListener("click", toggleTheme);
-  styleButton.addEventListener("click", toggleStyle);
+  class SideBarStyle {
+    constructor() {
+      this.styleButton = document.getElementById("stylemode-toggle");
+      this.sideBar = document.querySelector(".sidebar-nav-wrapper");
+      this.styleModeKey = 'solidMode';
+      this.initEventListeners();
+      this.initializeStyle();
+    }
+
+    initEventListeners() {
+      this.styleButton.addEventListener("click", () => this.toggleStyle());
+    }
+
+    initializeStyle() {
+      // Initialize the sidebar style based on local storage on page load
+      const styleMode = localStorage.getItem(this.styleModeKey);
+      if(styleMode === "on") {
+        this.applySolidStyle();
+      } else {
+        this.removeSolidStyle();
+      }
+    }
+
+    applySolidStyle() {
+      this.styleButton.dataset.checked = "on";
+      this.styleButton.checked = true;
+      this.sideBar.classList.add('style-2');
+      localStorage.setItem(this.styleModeKey, 'on');
+    }
+
+    removeSolidStyle() {
+      this.styleButton.dataset.checked = "off";
+      this.styleButton.checked = false;
+      this.sideBar.classList.remove('style-2');
+      localStorage.setItem(this.styleModeKey, 'off');
+    }
+
+    toggleStyle() {
+      const styleMode = localStorage.getItem(this.styleModeKey);
+      if(styleMode === "on") {
+        this.removeSolidStyle();
+      } else {
+        this.applySolidStyle();
+      }
+    }
+  }
+
+
+  new DarkMode();
+  new SideBarStyle();
 
 });
 
