@@ -75,8 +75,6 @@
  * ========= Theme Change Start ========
  */
 
-document.addEventListener('DOMContentLoaded', function() {
-
   class DarkMode {
     constructor() {
       this.darkThemeButton = document.getElementById('darkmode-toggle');
@@ -122,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.logo.setAttribute('src', this.darkSrc);
 
       localStorage.setItem(this.darkModeKey, 'on');
+      document.cookie = "darkmode=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
     }
 
     setLightMode() {
@@ -134,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.logo.setAttribute('src', this.lightSrc);
 
       localStorage.setItem(this.darkModeKey, 'off');
+      document.cookie = "darkmode=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     }
   }
 
@@ -165,6 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.styleButton.checked = true;
       this.sideBar.classList.add('style-2');
       localStorage.setItem(this.styleModeKey, 'on');
+      document.cookie = "style=two; expires=Fri, 31 Dec 9999 23:59:59 GMT";
     }
 
     removeSolidStyle() {
@@ -172,6 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.styleButton.checked = false;
       this.sideBar.classList.remove('style-2');
       localStorage.setItem(this.styleModeKey, 'off');
+      document.cookie = "style=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     }
 
     toggleStyle() {
@@ -184,11 +186,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-
   new DarkMode();
   new SideBarStyle();
-
-});
 
 /**
  * ========= Theme Change End ========
