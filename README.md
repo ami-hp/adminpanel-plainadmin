@@ -11,7 +11,6 @@ This is the RTL & Farsi version of PlainAdmin v1.2, So if you go to the original
 
 [//]: # (### [⬇️ Download Now]&#40;https://adminPanelDemo1.iamami.ir/download&#41;)
 
-[![plainadmindemo](https://plainadmin.com/assets/images/plainadmin.jpg)](https://demo.plainadmin.com/)
 
 
 ### Update Logs - 1.0 :
@@ -25,7 +24,7 @@ This is the RTL & Farsi version of PlainAdmin v1.2, So if you go to the original
 
 For the Original PlainAdmin Read the Content Below:
 
-[![plainadmindemo](https://plainadmin.com/assets/images/plainadmin.jpg)](https://demo.plainadmin.com/)
+
 
 ### [🚀 View Demo](https://demo.plainadmin.com/)
 
